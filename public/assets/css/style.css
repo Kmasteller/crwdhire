@@ -52,7 +52,8 @@ body.nav-open .nav-toggle .icon:after {
   width: 280px;
   height: 580px;
   background-color: #ECEBE9;
-  display: block;
+  display: inline-grid !important;
+  text-align: center !important;
   margin: 65px auto;
   overflow: hidden;
   position: relative;
@@ -161,6 +162,7 @@ body.nav-open .nav-toggle .icon:after {
   padding: 10px !important;
 }
 .nav-1 {
+  display: inline-grid !important;
   position: absolute;
   top: 80px;
   left: 0;
@@ -179,7 +181,6 @@ body.nav-open .nav-toggle .icon:after {
   list-style: none;
 }
 .nav-1 ul li a {
-  display: block;
   padding: 10px 0;
   text-align: center;
   color: white;
@@ -198,4 +199,11 @@ body.nav-open .nav-toggle .icon:after {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+nav ul{
+  display: inherit !important;
+}
+li{
+  box-sizing: 15px 100%;
 }
