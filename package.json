@@ -1,0 +1,46 @@
+{
+  "name": "crwdhire",
+  "version": "1.0.0",
+  "description": "Crowd Sourcing Job Listings",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^5.0.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "nightmare": "^2.10.0",
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "sequelize": "^4.31.1"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kmasteller/crwdhire.git"
+  },
+  "keywords": [
+    "Crowd",
+    "Source",
+    "Job",
+    "Listing",
+    "Find",
+    "Work",
+    "Share"
+  ],
+  "author": "crwd_hire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kmasteller/crwdhire/issues"
+  },
+  "homepage": "https://github.com/Kmasteller/crwdhire#readme"
+}
