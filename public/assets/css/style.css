@@ -14,7 +14,7 @@ body.nav-open .lower-screen {
   -webkit-transform: scale(0.8, 0.8);
           transform: scale(0.8, 0.8);
 }
-body.nav-open .nav {
+body.nav-open .nav-1 {
   -webkit-transform: translateY(0);
 }
 body.nav-open .nav-toggle {
@@ -157,7 +157,10 @@ body.nav-open .nav-toggle .icon:after {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
-.nav {
+.card-content {
+  padding: 10px !important;
+}
+.nav-1 {
   position: absolute;
   top: 80px;
   left: 0;
@@ -170,12 +173,12 @@ body.nav-open .nav-toggle .icon:after {
   -webkit-transition-timing-function: swing;
           transition-timing-function: swing;
   -webkit-transform: translateY(100%);
+  background-color: transparent;
 }
-.nav ul li {
+.nav-1 ul li {
   list-style: none;
-  background-color: black;
 }
-.nav ul li a {
+.nav-1 ul li a {
   display: block;
   padding: 10px 0;
   text-align: center;
@@ -185,9 +188,14 @@ body.nav-open .nav-toggle .icon:after {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-.nav ul:hover li a {
+.nav-1 ul:hover li a {
   opacity: 0.5;
 }
-.nav ul:hover li:hover a {
+.nav-1 ul:hover li:hover a {
   opacity: 1;
+}
+.close{
+  position: absolute;
+  right: 0;
+  top: 0;
 }
