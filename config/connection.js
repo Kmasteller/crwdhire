@@ -68,4 +68,4 @@ $(document).ready(function () {
 
 });
 
-module.export = connection;
+module.exports = connection;
