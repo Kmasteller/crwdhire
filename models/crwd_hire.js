@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
 
       jobCompany: {
           type: DataTypes.STRING,
-          allowNull: true
+          allowNull: false
       },
       
       jobPay: {
@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
       },
 
       jobPhone: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.STRING,
           allowNull: true
       },
 
