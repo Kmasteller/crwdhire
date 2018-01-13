@@ -67,3 +67,5 @@ $(document).ready(function () {
     });
 
 });
+
+module.export = connection;
