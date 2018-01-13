@@ -6,13 +6,16 @@
   <title>Material design cards & nav</title>
   
   
-	<!-- Local CSS -->
+<!-- Local CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<!-- Materialize Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+		<!-- Firebase Reference -->
+		<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   
 </head>
 
@@ -70,16 +73,83 @@
 		</div>
 	</div>
 </div>
+
+<div class="container">
+
+	<br>
+
+	<!-- Jumbotron Title -->
+	<div class="jumbotron">
+		<h1 class="text-center">(Placeholder) Add Card</h1>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Saved Data</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Location</th>
+								<th>Image URL</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody">
+
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Add Job</h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input class="form-control" id="name" type="text">
+						</div>
+						<div class="form-group">
+							<label for="location">Location</label>
+							<input class="form-control" id="location" type="text">
+						</div>
+						<div class="form-group">
+							<label for="imageURL">Image URL</label>
+							<input class="form-control" id="imageURL" type="file">
+						</div>
+						<div class="form-group">
+							<label for="description">Description</label>
+							<input class="form-control" id="description" type="text">
+						</div>
+						<button class="btn btn-primary" id="submit-job" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
   
 
-    <script  src="./assets/js/index.js"></script>
+
+  <script  src="./assets/js/index.js"></script>
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
        
-
-
 
 </body>
 
