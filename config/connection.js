@@ -2,15 +2,18 @@
 $(document).ready(function () {
     // console.log("ready!");
     // Initialize Firebase "https://www.gstatic.com/firebasejs/4.8.2/firebase.js"
+
     var config = {
-        apiKey: "AIzaSyA_k9TfR4opyCcU-_h9mQJXZJ4W5eDzLoM",
-        authDomain: "crowdhire.firebaseapp.com",
-        databaseURL: "https://crowdhire.firebaseio.com",
-        projectId: "crowdhire",
-        storageBucket: "crowdhire.appspot.com",
-        messagingSenderId: "109896827466"
-    };
-    firebase.initializeApp(config);
+    apiKey: "AIzaSyBq3rQU9-l0LPQiGXNivSsbS47MuNiW1XM",
+    authDomain: "crwd-hire.firebaseapp.com",
+    databaseURL: "https://crwd-hire.firebaseio.com",
+    projectId: "crwd-hire",
+    storageBucket: "crwd-hire.appspot.com",
+    messagingSenderId: "646628438655"
+  };
+  
+  firebase.initializeApp(config);
+
 
 
     var database = firebase.database();
