@@ -7,7 +7,7 @@
   font-weight: 300;
 }
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   font-family: 'Lato', sans-serif;
 }
 body.nav-open .lower-screen {
@@ -124,7 +124,7 @@ body.nav-open .nav-toggle .icon:after {
 }
 .lower-screen {
   margin-left: 4.5%;
-  padding: 80px 0 20px 0;
+  padding: 10px 0 20px 0;
   overflow-y: scroll;
   height: 580px;
   -webkit-transition-duration: 0.66s;
@@ -206,4 +206,7 @@ nav ul{
 }
 li{
   box-sizing: 15px 100%;
+}
+.top-logo{
+  padding: 25px 0 0 40px;
 }
