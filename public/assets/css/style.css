@@ -49,7 +49,7 @@ body.nav-open .nav-toggle .icon:after {
   background-color: white; */
 }
 .phone .screen {
-  width: 280px;
+  width: 312px;
   height: 580px;
   background-color: #ECEBE9;
   display: inline-grid !important;
@@ -220,6 +220,9 @@ li{
   padding:5px;
 }
 .landing-options{
+  padding: 0 15px 0 0;
+}
+.search-options{
   padding: 0 15px 0 0;
 }
 .card-reveal{
