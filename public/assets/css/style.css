@@ -219,3 +219,9 @@ li{
 .card-content-landing{
   padding:5px;
 }
+.landing-options{
+  padding: 0 15px 0 0;
+}
+.card-reveal{
+  padding:5px !important;
+}
