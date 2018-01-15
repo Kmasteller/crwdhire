@@ -124,7 +124,7 @@ body.nav-open .nav-toggle .icon:after {
 }
 .lower-screen {
   margin-left: 4.5%;
-  padding: 5px 0 20px 0;
+  padding: 0 0 20px 0;
   overflow-y: scroll;
   height: 580px;
   -webkit-transition-duration: 0.66s;
@@ -224,6 +224,10 @@ li{
 }
 .search-options{
   padding: 0 15px 0 0;
+  line-height: 2px;
+}
+.search-result-title{
+
 }
 .card-reveal{
   padding:5px !important;
