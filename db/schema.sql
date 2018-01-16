@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS crwdhire_db;
 -- Creates the "todolist" database --
 CREATE DATABASE crwdhire_db;
+USE crwdhire_db;
+
 CREATE TABLE jobs (
     id INT NOT NULL AUTO_INCREMENT,
     jobTitle VARCHAR (75) NOT NULL,
