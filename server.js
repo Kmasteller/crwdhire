@@ -4,6 +4,8 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
+
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,8 +18,14 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 // var routes = require("./controllers/crwd_controller.js");
+// var routes = require("./config/connection.js");
 
 // app.use("/", routes);
+
+
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
 
 app.listen(port, function () {
     console.log("we are running on port " + port)

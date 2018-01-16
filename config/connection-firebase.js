@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     // console.log("ready!");
     // Initialize Firebase "https://www.gstatic.com/firebasejs/4.8.2/firebase.js"
