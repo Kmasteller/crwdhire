@@ -10,7 +10,7 @@ router.get("/", function(req, res) {
 });
 
 router.get("/home", function(req, res) {
-  burger.all(function(data) {
+  jobs.all(function(data) {
     var hbsObject = {
       crwdhire: data
     };
