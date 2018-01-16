@@ -7,7 +7,7 @@
   font-weight: 300;
 }
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   font-family: 'Lato', sans-serif;
 }
 body.nav-open .lower-screen {
@@ -49,7 +49,7 @@ body.nav-open .nav-toggle .icon:after {
   background-color: white; */
 }
 .phone .screen {
-  width: 280px;
+  width: 312px;
   height: 580px;
   background-color: #ECEBE9;
   display: inline-grid !important;
@@ -65,7 +65,7 @@ body.nav-open .nav-toggle .icon:after {
   height: 60px;
   z-index: 2;
   border-radius: 50%;
-  margin: 10px;
+  margin: 5px;
   position: absolute;
   cursor: pointer;
   -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
@@ -124,9 +124,9 @@ body.nav-open .nav-toggle .icon:after {
 }
 .lower-screen {
   margin-left: 4.5%;
-  padding: 80px 0 20px 0;
+  padding: 0 0 20px 0;
   overflow-y: scroll;
-  height: 580px;
+  height: auto;
   -webkit-transition-duration: 0.66s;
           transition-duration: 0.66s;
   -webkit-transition-timing-function: swing;
@@ -206,4 +206,29 @@ nav ul{
 }
 li{
   box-sizing: 15px 100%;
+}
+.top-logo{
+  padding: 20px 0 0 40px;
+}
+.landing-logo {
+  margin-top: 5px;
+}
+.welcome{
+  font-size: 20px;
+}
+.card-content-landing{
+  padding:5px;
+}
+.landing-options{
+  padding: 0 15px 0 0;
+}
+.search-options{
+  padding: 0 15px 0 0;
+  line-height: 2px;
+}
+.search-result-title{
+
+}
+.card-reveal{
+  padding:5px !important;
 }
