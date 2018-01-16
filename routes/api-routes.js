@@ -6,7 +6,7 @@
 // =============================================================
 
 // Requiring our Todo model
-var db = require("../models");
+var db = require("../models/crwd_hire.js");
 
 // Routes
 // =============================================================
