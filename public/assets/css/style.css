@@ -232,3 +232,9 @@ li{
 .card-reveal{
   padding:5px !important;
 }
+.input-item{
+  margin:0 !important;
+}
+.input-item{
+  align-content: left;
+}
