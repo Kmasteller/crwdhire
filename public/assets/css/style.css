@@ -238,3 +238,6 @@ li{
 .input-item{
   align-content: left;
 }
+.slide-logo{
+  padding:0px !important;
+}
