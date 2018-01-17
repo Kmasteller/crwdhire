@@ -76,8 +76,8 @@ $(document).ready(function() {
   }
 
   // Submits a new post and brings user to page upon completion
-  function submitJob(job) {
-    $.post("/jobs", job, function() {
+  function submitJob(newJob) {
+    $.post("/jobs", newJob, function() {
       window.location.href = "/";
     });
   }
@@ -86,7 +86,7 @@ $(document).ready(function() {
   function getJobData(id, type) {
     var queryUrl;
     switch (type) {
-      case "job":
+      case "jobs":
         queryUrl = "/add" + id;
         break;
       case "author":
