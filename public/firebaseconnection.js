@@ -36,18 +36,18 @@ $(document).ready(function () {
         jobCompany = $("#jobCompany").val().trim();
         jobTitle = $("#jobTitle").val().trim();
         jobType = $("#jobType").val().trim();
-        // jobImage = $("jobImage").val();
-        // jobPhone = $("jobPhone").val();
-        // jobEmail = $("#jobEmail").val();
-        // jobURL = $("jobURL").val();
-        // jobContact = $("jobContact").val();
-        // jobDescription = $("jobDescription").val();
+        jobImage = $("#jobImage").val();
+        jobPhone = $("#jobPhone").val();
+        jobEmail = $("#jobEmail").val();
+        jobURL = $("#jobURL").val();
+        jobContact = $("#jobContact").val();
+        jobDescription = $("#jobDescription").val();
 
         database.ref("/newJobs").push({
             jobCompany: jobCompany,
             jobTitle: jobTitle,
             jobType: jobType,
-            // jobImage: jobImage,
+            jobImage: jobImage,
             jobPhone: jobPhone,
             jobEmail: jobEmail,
             jobURL: jobURL,
