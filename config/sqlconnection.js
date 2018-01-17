@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
       port: 3306,
       host: "localhost",
       user: "root",
-      password: "Goldgold3056",
+      password: "Powell12",
       database: "crwdhire_db"
     });
 }
