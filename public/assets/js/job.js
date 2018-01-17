@@ -1,11 +1,15 @@
 $(document).ready(function() {
+  console.log("did job.js run?");
   // Getting jQuery references to the post body, title, form, and author select
   var bodyInput = $("#body");
   var titleInput = $("#title");
   var jobForm = $("#job");
   var authorSelect = $("#author");
   // Adding an event listener for when the form is submitted
-  $(jobForm).on("submit", handleFormSubmit);
+  $("#submit-job").on("click", function(event) {
+    console.log("function handle submit works");
+    handleFormSubmit(event);
+  });
   // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
   var url = window.location.search;
   var jobId;
@@ -29,22 +33,34 @@ $(document).ready(function() {
 
   // A function for handling what happens when the form to create a new post is submitted
   function handleFormSubmit(event) {
+    console.log("handle submit");
     event.preventDefault();
     // Wont submit the post if we are missing a body, title, or author
-    if (!titleInput.val().trim() || !bodyInput.val().trim() || !authorSelect.val()) {
-      return;
-    }
+    // if (!titleInput.val().trim() || !bodyInput.val().trim() || !authorSelect.val()) {
+    //   return;
+    // }
     // Constructing a newPost object to hand to the database
+
+    var jobCompany = $("#jobCompany").val().trim();
+    var jobTitle = $("#jobTitle").val().trim();
+    var jobType = $("#jobType").val().trim();
+    var jobImage = $("#jobImage").val();
+    var jobPhone = $("#jobPhone").val();
+    var jobEmail = $("#jobEmail").val();
+    var jobURL = $("#jobURL").val();
+    var jobContact = $("#jobContact").val();
+    var jobDescription = $("#jobDescription").val();
+
     var newJob = {
-      jobCompany: jobCompany.val().trim(),
-      jobTitle: jobTitle.val().trim(),
-      jobType: jobType.val().trim(),
-      jobImage: jobImage.val(),
-      jobPhone: jobPhone.val(),
-      jobEmail: jobEmail.val(),
-      jobURL: jobURL.val(), 
-      jobContact: jobContact.val(),
-      jobDescription: jobDescription.val()
+      jobCompany: jobCompany,
+      jobTitle: jobTitle,
+      jobType: jobType,
+      jobImage: jobImage,
+      jobPhone: jobPhone,
+      jobEmail: jobEmail,
+      jobURL: jobURL, 
+      jobContact: jobContact,
+      jobDescription: jobDescription
 
     };
 

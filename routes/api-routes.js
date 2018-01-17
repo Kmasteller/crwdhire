@@ -14,6 +14,7 @@ module.exports = function(app) {
 
   // GET route for getting all of the posts
   app.get("/all", function(req, res) {
+    // console.log("this is our db Job: " , db);
     // Add sequelize code to find all posts, and return them to the user with res.json
     db.Job.findAll({}).then(function(results) {
       res.json(results);
@@ -49,12 +50,13 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new post
-  app.post("/addform", function(req, res) {
+  app.post("/jobs", function(req, res) {
+    console.log("we hit /jobs route");
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
     db.Job.create({
       jobTitle: req.body.jobTitle,
-      jobLocation: req.body.jobLocation,
+      jobLocation: "SLC",
       jobDescription: req.body.jobDescription,
       jobCompany: req.body.jobCompany,
       jobPay: req.body.jobPay,
