@@ -43,7 +43,7 @@ module.exports = function(sequelize, DataTypes) {
       jobPartTime: {
           type: DataTypes.BOOLEAN,
           allowNull: true,
-          defaultValue: true
+          defaultValue: false
       },
 
         jobFullTime: {
@@ -55,7 +55,7 @@ module.exports = function(sequelize, DataTypes) {
         jobUnknownTime: {
             type: DataTypes.BOOLEAN,
             allowNull: true,
-            defaultValue: true
+            defaultValue: false
         }
 
     });
