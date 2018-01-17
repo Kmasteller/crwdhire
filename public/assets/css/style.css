@@ -200,7 +200,6 @@ body.nav-open .nav-toggle .icon:after {
   right: 0;
   top: 0;
 }
-
 nav ul{
   display: inherit !important;
 }
@@ -241,3 +240,14 @@ li{
 .slide-logo{
   padding:0px !important;
 }
+.page {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+  }
+  .current-page {
+    visibility: visible;
+    z-index: 1;
+  }
