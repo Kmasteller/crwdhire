@@ -13,6 +13,8 @@ CREATE TABLE jobs (
     jobPhone VARCHAR (20) NULL,
     jobContact VARCHAR (75) NULL,
     jobURL VARCHAR (240) NULL,
-    jobHours BOOLEAN DEFAULT TRUE,
+    jobPartTime BOOLEAN DEFAULT FALSE,
+    jobFullTime BOOLEAN DEFAULT TRUE,
+    jobUnknownTime BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (id)
 );
