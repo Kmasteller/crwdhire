@@ -1,0 +1,106 @@
+html {
+      font-size: 87.5%;
+    }
+
+    body {
+      /* background: #f1f1f1;
+      color: #424242; */
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .onboarding-card {
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.954);
+      border-radius: 5px 5px 5px 5px;
+      border-width: 5px;
+      border-color: black;
+      bottom: 0;
+      box-shadow: 30px 30px 30px 30px rgba(0,0,0,0.15);
+      height: 530px;
+      left: 0;
+      margin: auto;
+      opacity: 0.5;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transition: all 0.2s linear;
+      user-select: none;
+      visibility: hidden;
+      width: 280px;
+    }
+
+    .visible-card {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .onboarding-card__arrow {
+      box-shadow: 0 5px 40px rgba(0,0,0,0.15);
+      background: red;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      display: block;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      width: 30px;
+    }
+
+    .onboarding-card__arrow--left {
+      left: 25px;
+      transform: translate(-100%, -50%);
+    }
+
+    .onboarding-card__arrow--right {
+      right: 25px;
+      transform: translate(100%, -50%);
+    }
+
+    .onboarding-card__img-wrap {
+      background: #d2d1d0;
+      border-radius: 2px;
+      padding: 0px 0px;
+      text-align: center;
+    }
+
+    svg {
+      display: block;
+      margin: auto;
+      height: 120px;
+      width: auto;
+    }
+
+    .onboarding-card__content {
+      padding: 30px;
+    }
+
+    h1 {
+      color: #212121;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.618;
+    }
+
+    button {
+      background: red;
+      border: none;
+      border-radius: 2px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+      float: right;
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    a {
+      color: #9a9a9a;
+      float: left;
+      margin-top: 20px;
+    }

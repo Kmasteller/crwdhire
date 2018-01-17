@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <title>Crowd Hire App</title>
 
-	<!-- jQuery Script -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- Compiled and minified CSS -->
@@ -19,18 +17,189 @@
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 	<!-- Local CSS -->
 	<link rel="stylesheet" href="./assets/css/style.css">
-	<!-- <link rel="stylesheet" href="./assets/css//animations.css"> -->
+	<link rel="stylesheet" href="./assets/css/onboarding.css">
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/png" href="./assets/images/crowdhirelogos/favicon.png"/>
 	<link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
-  
+
 </head>
 
 <body>
+<!-- Onboarding -->
+
+<div class="onboarding-card visible-card" id="card_1">
+		<div class="onboarding-card__arrow onboarding-card__arrow--right" data-target="#card_2"></div>
+		<div class="onboarding-card__img-wrap">
+			<img src="https://thumbs.dreamstime.com/t/happy-business-group-leader-open-hand-ready-to-shake-your-hand-62379773.jpg" width="100%" height="auto">
+		  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+	  <path fill="#9E9E9E" d="M256.492 92.857L400 10l143.514 82.854L400 175.712M256.487 92.856v165.717L400 341.428V175.715L256.487 92.86"/>
+	  <path opacity=".2" fill="#FFF" d="M256.492 92.857L400 10l143.514 82.854L400 175.712"/>
+	  <path opacity=".1" fill="#FFF" d="M256.487 92.856v165.717L400 341.428V175.715L256.487 92.86"/>
+	  <path fill="#9E9E9E" d="M543.508 258.568L400 341.426v-165.71l143.514-82.858V258.57"/>
+	  <path fill="#E9E9E9" d="M112.98 341.43l143.507-82.857L400 341.428l-143.513 82.856M112.976 341.43v165.716L256.486 590V424.288l-143.51-82.854M399.997 507.142l-143.51 82.855v-165.71L400 341.43v165.713"/>
+	  <path fill="#4CAF50" d="M400.004 341.428l143.51-82.857 143.51 82.856-143.51 82.856M400 341.426v165.717l143.514 82.854v-165.71L400 341.43"/>
+	  <path fill="#4CAF50" d="M687.02 507.14l-143.506 82.854v-165.71l143.51-82.855v165.713"/>
+	  <path opacity=".1" fill="#FFF" d="M400 341.426v165.717l143.514 82.854v-165.71L400 341.43"/>
+	  <path opacity=".2" fill="#FFF" d="M400.004 341.428l143.51-82.857 143.51 82.856-143.51 82.856"/>
+	  <path opacity=".5" fill="#FFF" d="M112.976 341.43v165.716L256.486 590V424.288l-143.51-82.854"/>
+	  <path opacity=".85" fill="#FFF" d="M112.98 341.43l143.507-82.857L400 341.428l-143.513 82.856"/>
+	</svg> -->
+
+		</div>
+		<div class="onboarding-card__content">
+		  <h5 align="center">Welcome to<br>CRWD HIRE.com</h5>
+		  <p>You may notice a few changes around here. Take a minute to see what's new!</p>
+		</div>
+	  </div>
+	  <div class="onboarding-card" id="card_2">
+		<div class="onboarding-card__arrow onboarding-card__arrow--left" data-target="#card_1"></div>
+		<div class="onboarding-card__arrow onboarding-card__arrow--right" data-target="#card_3"></div>
+		<div class="onboarding-card__img-wrap">
+				<img src="https://thumbs.dreamstime.com/t/happy-business-group-leader-open-hand-ready-to-shake-your-hand-62379773.jpg" width="100%" height="auto">
+		  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+	  <path fill="#FFF" d="M459.423 384.12s-16.78.762-16.78-37.375c0 0 1.59-1.262 4.06-3.533 8.467-7.752 27.823-27.778 33.805-53.598 1.16-4.948 1.816-10.063 1.816-15.37 0 0 1.994-.984 4.796-2.864 7.165-4.743 19.833-15.52 20.338-32.055.016-.322.077-.624.077-.972 0-23.638-6.106-24.402-11.444-29.746 0 0 1.527-53.435-1.538-64.122-2.525-8.78-6.65-55.38-56.426-71.53l.05-.013s-46.662-26.08-101.292-3.204c0 0 14.508-1.1 26.153 2.56-51.767 15.514-55.97 63.272-58.535 72.187-3.05 10.688-1.522 64.122-1.522 64.122-5.337 5.343-11.433 6.107-11.433 29.746 0 .35.05.65.063.972.517 16.536 13.173 27.312 20.34 32.055 2.8 1.88 4.795 2.865 4.795 2.865 0 5.305.67 10.42 1.805 15.37 6.004 25.82 25.346 45.845 33.812 53.597 2.474 2.27 4.052 3.533 4.052 3.533 0 38.137-16.782 37.375-16.783 37.375-35.952 11.818-71.904 26.26-103.147 47.972-20.612 14.324-45.953 29.03-58.552 51.568-.004.01-.01.017-.016.028-19.01 34.044 25.313 34.614 46.833 35.254 50.896 1.515 101.77-3.558 152.668-3.564l22.11.002c39.116 0 78.02 4.943 117.042 6.984 27.35 1.43 57.496 7.905 84.386.256 42.777-12.168 6.132-53.08-13.982-71.273-35.672-32.26-82.455-52.406-127.547-67.227z"/>
+	  <path fill="#9E9E9E" d="M664.625 414.534s-10.31.39-12.48-20.436c21.7 10.285 91.07-1.412 80.717-10.52-10.35-9.144-31.534-66.61-31.734-146.903-.242-83.23-74.46-67.258-81.89-65.453-.226 0-.428-.013-.67-.013-.314 0-.616.02-.946.02-9.222-1.384-81.57-9.736-81.57 65.446 0 80.297-21.4 137.76-31.772 146.902-10.344 9.11 59.05 20.807 80.74 10.52-2.184 20.827-12.467 20.437-12.467 20.437-2.22.713-4.29 1.482-6.405 2.234 34.29 19.17 72.843 47.086 86.395 86.095 2.36 6.79 1.806 14.563 5.91 20.66 9 13.358 29.93 14.05 44.142 13.077 19.82-1.356 74.017-6.473 84.33-27.6 7.757-15.894-19.368-38.584-29.656-47.12-26.804-22.237-59.84-36.564-92.645-47.348z"/>
+	  <path fill="#F1F1F1" d="M253.88 280.433s1.174-40.93-1.157-49.126c-2.17-7.545-5.868-51.353-58.473-58.116 10.31-4.78 22.082-7.153 22.082-7.153-33.046-7.332-46.535.7-51.945 7.318-1.666.227-3.32.518-4.91.833 2.35-10.346 18.245-16 18.245-16-19.188-.58-31.063 13.527-36.463 22.02-29.565 14.603-32.327 44.942-34.095 51.1-2.348 8.194-1.173 49.125-1.173 49.125-4.087 4.07-8.743 4.663-8.743 22.783 0 18.124 19.278 27.455 19.278 27.455 0 31.575 30.383 55.537 30.383 55.537 0 29.227-12.853 28.647-12.856 28.647-22.718-.712-59.562 22.317-78.448 33.46C35.12 460.4-19.196 503.28 25.428 518.59c9.246 3.174 117.61.527 117.66-3.21 0-.01 3.502-50.432 89.142-98.31-2.117-.745-4.204-1.495-6.384-2.216 0 0-12.897.582-12.897-28.647 0 0 30.41-23.962 30.41-55.536 0 0 19.292-9.33 19.292-27.454 0-18.12-4.67-18.713-8.77-22.783z"/>
+	  <g>
+		<path fill="#4CAF50" d="M174.534 497.246h46.408v29.136h-46.408v51.188H147.52v-51.188h-46.403v-29.136h46.404v-50.438h27.014v50.438z"/>
+	  </g>
+	</svg> -->
+
+		</div>
+		<div class="onboarding-card__content">
+		  <h5>Add valuable partnerships</h5>
+		  <p>Partnerships give you a chance to connect with your friends and clients while still staying within your own account.</p>
+		</div>
+	  </div>
+	  <div class="onboarding-card" id="card_3">
+		<div class="onboarding-card__arrow onboarding-card__arrow--left" data-target="#card_2"></div>
+		<div class="onboarding-card__arrow onboarding-card__arrow--right" data-target="#card_4"></div>
+		<div class="onboarding-card__img-wrap">
+				<img src="https://thumbs.dreamstime.com/t/happy-business-group-leader-open-hand-ready-to-shake-your-hand-62379773.jpg" width="100%" height="auto">
+		  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+	  <g fill="none" stroke="#FFF" stroke-width="10" stroke-miterlimit="10">
+		<path d="M368.535 414.276v15l-14.488 3.883"/>
+		<path stroke-dasharray="33.5909,33.5909" d="M321.6 441.854l-48.67 13.04"/>
+		<path d="M256.707 459.24l-14.488 3.884v-15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M242.22 419.026V84.41"/>
+		<path d="M242.22 69.86v-15l14.487-3.882"/>
+		<path stroke-dasharray="33.5909,33.5909" d="M289.154 42.284l48.67-13.042"/>
+		<path d="M354.047 24.895l14.488-3.883v15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M368.535 65.11v334.618"/>
+	  </g>
+	  <g fill="none" stroke="#FFF" stroke-width="10" stroke-miterlimit="10">
+		<path d="M368.535 414.276v15l14.488 3.883"/>
+		<path stroke-dasharray="33.5874,33.5874" d="M415.467 441.854l48.664 13.04"/>
+		<path d="M480.352 459.24l14.49 3.884v-15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M494.84 419.026V84.41"/>
+		<path d="M494.84 69.86v-15l-14.488-3.882"/>
+		<path stroke-dasharray="33.5875,33.5875" d="M447.91 42.283l-48.665-13.04"/>
+		<path d="M383.023 24.895l-14.488-3.883v15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M368.535 65.11v334.618"/>
+	  </g>
+	  <g fill="none" stroke="#FFF" stroke-width="10" stroke-miterlimit="10">
+		<path d="M509.33 50.978l-14.49 3.882v15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M494.84 98.958v334.617"/>
+		<path d="M494.84 448.124v15l14.49-3.883"/>
+		<path stroke-dasharray="33.5909,33.5909" d="M541.775 450.547l48.67-13.04"/>
+		<path d="M606.668 433.16l14.49-3.884v-15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M621.157 385.18V50.558"/>
+		<path d="M621.157 36.012v-15l-14.49 3.883"/>
+		<path stroke-dasharray="33.5909,33.5909" d="M574.223 33.59l-48.67 13.04"/>
+	  </g>
+	  <g fill="none" stroke="#FFF" stroke-width="10" stroke-miterlimit="10">
+		<path d="M621.157 414.276v15l14.49 3.883"/>
+		<path stroke-dasharray="33.589,33.589" d="M668.09 441.854l48.667 13.04"/>
+		<path d="M732.98 459.24l14.488 3.884v-15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M747.468 419.026V84.41"/>
+		<path d="M747.468 69.86v-15l-14.49-3.882"/>
+		<path stroke-dasharray="33.5891,33.5891" d="M700.535 42.283l-48.668-13.04"/>
+		<path d="M635.646 24.895l-14.49-3.883v15"/>
+		<path stroke-dasharray="29.0972,29.0972" d="M621.157 65.11v334.618"/>
+	  </g>
+	  <g>
+		<path fill="#FFF" d="M175.277 533.11L48.96 566.957V158.692l126.317-33.848"/>
+		<path fill="#E6E7E8" d="M175.277 533.11l126.303 33.847V158.692l-126.303-33.848"/>
+		<path fill="#FFF" d="M301.58 158.692v408.265l126.316-33.847V124.844"/>
+		<path fill="#E6E7E8" d="M427.896 533.11l126.313 33.847V158.692l-126.314-33.848"/>
+		<g opacity=".35">
+		  <path fill="none" d="M445.48 300.408c-5.58-.232-12.31 2.54-17.46 7.813-7.392 7.51-8.72 17.14-2.934 21.506 4.926 3.714 13.394 2.333 20.393-2.79 1.194-.896 2.368-1.875 3.453-2.97 7.4-7.545 8.7-17.172 2.916-21.513-1.735-1.326-3.96-1.928-6.37-2.045z"/>
+		  <path fill="#999" d="M480.42 273.343c-8.935-6.72-21.612-8.144-34.94-5.033-13.682 3.194-28.046 11.15-39.77 23.11 0 0-1.518 1.517-3.94 4.268-.097.1-.197.253-.296.36-10.98 12.714-39.184 49.95-33.93 92.312 32.055-1.202 59.373-14.658 77.934-26.958 9.57-6.353 16.846-12.398 21.162-16.29.124-.1.24-.208.36-.308 2.763-2.492 4.244-4.024 4.244-4.024 23.18-23.622 27.273-53.8 9.177-67.437zm-31.487 50.624c-1.085 1.095-2.26 2.073-3.454 2.97-7 5.123-15.468 6.504-20.394 2.79-5.786-4.367-4.458-13.995 2.934-21.505 5.15-5.274 11.88-8.046 17.46-7.813 2.41.116 4.636.718 6.37 2.045 5.783 4.34 4.484 13.967-2.917 21.512z"/>
+		</g>
+		<g>
+		  <path fill="none" d="M366.902 288.666c12.862 0 23.296-10.435 23.296-23.3 0-12.864-10.434-23.297-23.296-23.297-12.876 0-23.3 10.432-23.3 23.296.002 12.865 10.424 23.3 23.3 23.3z"/>
+		  <path fill="#4CAF50" d="M439.54 272.472c.394-4.5.358-7.105.358-7.105 0-40.322-32.682-73.006-72.996-73.006-40.328 0-72.99 32.685-72.99 73.007 0 0-.047 2.604.35 7.105.02.19.036.378.045.584 1.9 20.59 12.614 78.05 72.596 115.745 59.98-37.693 70.692-95.155 72.584-115.744.02-.206.042-.395.053-.584zm-72.638-30.403c12.862 0 23.296 10.432 23.296 23.296 0 12.865-10.434 23.3-23.296 23.3-12.876 0-23.3-10.435-23.3-23.3.002-12.864 10.424-23.297 23.3-23.297z"/>
+		</g>
+	  </g>
+	  <g>
+		<path fill="#9E9E9E" d="M630.863 501.102h24.062v15.108h-24.062v26.54h-14.01v-26.54h-24.06v-15.108h24.06V474.95h14.01v26.152z"/>
+	  </g>
+	</svg> -->
+
+		</div>
+		<div class="onboarding-card__content">
+		  <h5>Share your data with your partners</h5>
+		  <p>Have a flight you'd like to copy over to someone else? Now, it's easy to do!</p>
+		</div>
+	  </div>
+	  <div class="onboarding-card" id="card_4">
+		<div class="onboarding-card__arrow onboarding-card__arrow--left" data-target="#card_3"></div>
+		<div class="onboarding-card__arrow onboarding-card__arrow--right" data-target="#card_5"></div>
+		<div class="onboarding-card__img-wrap">
+				<img src="https://thumbs.dreamstime.com/t/happy-business-group-leader-open-hand-ready-to-shake-your-hand-62379773.jpg" width="100%" height="auto">
+		  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+	  <path fill="#9E9E9E" d="M495.607 579.49c-3.43-2.047-6.204-4.94-7.916-9.252-2.617-6.604-2.635-13.863-3.712-20.824-2.102-13.664-3.375-27.494-4.502-41.28H317.867c-1.122 13.786-2.39 27.616-4.502 41.28-1.078 6.96-1.09 14.22-3.712 20.824-1.707 4.313-4.48 7.205-7.912 9.25h-27.92v8.994c-.5 1.9 9.416 1.5 10.373 1.5h228.964c.95 0 10.872.4 10.372-1.5v-8.993h-27.923zM742.9 36.595c0-14.676-11.885-26.577-26.57-26.577H83.676C69 10.018 57.1 21.918 57.1 36.595v389.923h685.8V36.595z"/>
+	  <path fill="#FFF" d="M742.9 476.25v-49.73H57.1v49.73c0 14.675 11.9 26.57 26.577 26.57H716.33c14.686 0 26.57-11.895 26.57-26.57z"/>
+	  <path fill="#AFAFAF" d="M90.298 43.22h619.378v350.09H90.298z"/>
+	  <path opacity=".1" fill="#FFF" d="M709.69 43.224h-196.4l146.41 350.09h49.99"/>
+	  <path fill="#ECEFF0" d="M514.94 576.53c-3.913-.956-7.887-1.612-11.772-2.645-6.86-1.822-12.63-4.96-15.477-11.797-2.617-6.313-2.635-13.23-3.712-19.877-2.102-13.04-3.375-26.238-4.502-39.39H317.867c-1.122 13.15-2.39 26.35-4.502 39.39-1.078 6.648-1.09 13.564-3.712 19.878-2.836 6.838-8.61 9.975-15.477 11.797-3.88 1.033-7.86 1.69-11.773 2.646-1.8.434-7.994.822-8.584 2.96-.5 1.81 9.416 1.422 10.373 1.422h228.964c.95 0 10.872.39 10.372-1.423-.595-2.137-6.788-2.526-8.59-2.96z"/>
+	  <path fill="#F1F1F1" d="M514.94 576.53c-3.913-.956-7.887-1.612-11.772-2.645-6.86-1.822-12.63-4.96-15.477-11.797-2.617-6.313-2.635-13.23-3.712-19.877-2.102-13.04-3.375-26.238-4.502-39.39H317.867c-1.122 13.15-2.39 26.35-4.502 39.39-1.078 6.648-1.09 13.564-3.712 19.878-2.836 6.838-8.61 9.975-15.477 11.797-3.88 1.033-7.86 1.69-11.773 2.646-1.8.434-7.994.822-8.584 2.96-.5 1.81 9.416 1.422 10.373 1.422h228.964c.95 0 10.872.39 10.372-1.423-.595-2.137-6.788-2.526-8.59-2.96z"/>
+	  <path fill="#4CAF50" d="M418.594 464.675c0 10.26-8.32 18.59-18.59 18.59-10.272 0-18.598-8.33-18.598-18.59 0-10.273 8.325-18.602 18.6-18.602 10.267 0 18.588 8.328 18.588 18.602z"/>
+	  <path fill="none" d="M313.67 508.134h179.023"/>
+	  <path fill="#E1E1E1" d="M479.477 502.82h-161.61c-.15 1.772-.306 3.542-.464 5.313"/>
+	</svg> -->
+
+		</div>
+		<div class="onboarding-card__content">
+		  <h5>See more of your map at once</h5>
+		  <p>An improved layout means you more screen real estate for what really matters: your maps.</p>
+		</div>
+	  </div>
+	  <div class="onboarding-card" id="card_5">
+		<div class="onboarding-card__arrow onboarding-card__arrow--left" data-target="#card_4"></div>
+		<div class="onboarding-card__img-wrap">
+		  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+	  <path fill="#F1F1F1" d="M561.2 230.623v-59.7l-63.237 36.508c-3.17 1.834-5.77 6.33-5.77 9.99v45.216c0 3.662-2.997 6.66-6.657 6.66H316.607c-3.662 0-6.66-2.998-6.66-6.66V217.42c0-3.66-2.597-8.156-5.77-9.99l-63.233-36.507v59.7l-1.005-.577L26.908 107.06v159.25c0 3.666 2.6 8.16 5.77 9.992l290.875 167.926c3.17 1.828 8.76 3.327 12.424 3.327h130.188c3.66 0 9.256-1.5 12.423-3.327l290.875-167.926c3.17-1.833 5.77-6.326 5.77-9.99V107.06L561.198 230.623z"/>
+	  <path fill="#FFF" d="M478.93 250.048s-44.987-6.817-57.206-4.09c-12.217 2.727-14.366 4.09-14.366 4.09h.035-.035s2.15 1.365 14.366 4.09c12.218 2.726 57.206-4.09 57.206-4.09h-.05.05zM394.037 250.048s-2.15-1.363-14.367-4.09c-12.218-2.728-57.207 4.09-57.207 4.09h.105-.105s44.99 6.816 57.207 4.09c12.218-2.725 14.367-4.09 14.367-4.09h-.076.077z"/>
+	  <path fill="#4CAF50" d="M309.945 217.42c0-3.66-2.597-8.156-5.77-9.99l-63.233-36.507v12.14l69.003 39.837v-5.48z"/>
+	  <path fill="#FFF" d="M239.607 170.154L32.68 50.69c-3.173-1.832-5.772-.332-5.772 3.332v51.5l212.7 122.795v-58.163z"/>
+	  <path fill="#4CAF50" d="M32.68 50.69c-3.173-1.832-5.772-.332-5.772 3.332v5.48l212.7 122.79v-12.138L32.677 50.69z"/>
+	  <path fill="#FFF" d="M775.23 105.523v-51.5c0-3.665-2.598-5.165-5.77-3.332L562.534 170.155v58.163L775.23 105.523z"/>
+	  <path fill="#4CAF50" d="M497.963 207.43c-3.17 1.834-5.77 6.33-5.77 9.99v5.48l69.006-39.837v-12.14l-63.237 36.508zM775.23 59.5v-5.478c0-3.664-2.598-5.164-5.77-3.33L562.534 170.153v12.137L775.23 59.5z"/>
+	  <path fill="#9E9E9E" d="M410.965 403.516v-10.72l-10.37-5.987-10.376 5.985v10.72l-9.283 5.357v11.98l10.376 5.987 9.282-5.356 9.28 5.355 10.37-5.987v-11.98l-9.28-5.357zm-1.09 20.803l-8.19-4.727v-9.46l8.19-4.728 8.188 4.73v9.458l-8.188 4.726zm-17.473-30.26l8.192-4.725 8.187 4.725v9.456l-8.186 4.727-8.192-4.727v-9.456zm7.1 16.075v9.46l-8.19 4.725-8.193-4.726v-9.46l8.193-4.728 8.19 4.73z"/>
+	  <path fill="#CCC" d="M473.4 446.457h-1.335v-129.26H329.983v129.26h-1.33l.008-130.595H473.4" opacity=".5"/>
+	  <path fill="#CCC" d="M472.678 319.872c0 1.857-1.505 3.363-3.358 3.363-1.86 0-3.364-1.506-3.364-3.363 0-1.856 1.505-3.36 3.364-3.36 1.853 0 3.358 1.504 3.358 3.36z"/>
+	  <circle fill="#CCC" cx="469.292" cy="443.096" r="3.361"/>
+	  <path fill="#CCC" d="M472.63 360.95c0 1.856-1.505 3.36-3.365 3.36-1.854 0-3.358-1.504-3.358-3.36 0-1.857 1.504-3.363 3.358-3.363 1.86 0 3.364 1.506 3.364 3.362zM472.702 402.02c0 1.855-1.504 3.364-3.357 3.364-1.86 0-3.365-1.51-3.365-3.363 0-1.855 1.505-3.358 3.365-3.358 1.853 0 3.357 1.503 3.357 3.36zM336.218 319.892c0 1.857-1.507 3.362-3.36 3.362-1.855 0-3.362-1.505-3.362-3.362 0-1.856 1.507-3.362 3.362-3.362 1.853 0 3.36 1.505 3.36 3.362zM336.218 443.096c0 1.856-1.507 3.36-3.36 3.36-1.855 0-3.362-1.504-3.362-3.36 0-1.857 1.507-3.36 3.362-3.36 1.853-.002 3.36 1.502 3.36 3.36zM336.218 360.958c0 1.856-1.507 3.362-3.36 3.362-1.855 0-3.362-1.506-3.362-3.362s1.507-3.36 3.362-3.36c1.853 0 3.36 1.504 3.36 3.36zM336.218 402.027c0 1.857-1.507 3.363-3.36 3.363-1.855 0-3.362-1.506-3.362-3.363 0-1.855 1.507-3.36 3.362-3.36 1.853 0 3.36 1.505 3.36 3.36z"/>
+	  <path fill="#9E9E9E" d="M394.037 239.352h13.32v30.042h-13.32z"/>
+	  <path fill="#FFF" d="M41.77 114.1l-.166 1.442 199.338 115.08v-59.7l-1.335-.768v58.163M760.37 114.1l.165 1.442L561.2 230.622v-59.7l1.333-.768v58.163"/>
+	  <path fill="#9E9E9E" d="M5.748 32.444l6.502 64.618.166 1.63 14.492 166.544 14.696-149.694.167-1.44L48.08 59.55M753.414 59.953l6.498 54.414.174 1.438L775.23 266.31l14.053-167.363.16-1.628 6.305-64.47"/>
+	</svg> -->
+
+		</div>
+		<div class="onboarding-card__content">
+		  <h5>There's lots to see&mdash;check it out!</h5>
+		  <p>We'd love to give you a quick tour of all that's we've changed and added.</p>
+		  <button type="button">Take a tour</button>
+		  <a href="#">No, thanks</a>
+		</div>
+	  </div>
+	  <script  src="./assets/js/onboarding.js"></script> -->
+<!-- End of Onboarding Content -->
 
   <div class="phone">
 	<div class="screen">
-		
+
 		<nav class="nav-1">
 			<ul id="list">
 				<li><a href="index.html" >Home</a></li>
@@ -57,11 +226,10 @@
 						<img class="landing-logo" src="./assets/images/crowdhirelogos/crwdhirelogo1.jpg" width="100%" height"">
 					</div>
 					<div class="card-reveal">
-						<!-- <span class="card-title grey-text text-darken-4">CRWD HIRE<hr><i class="material-icons right close">close</i></span> -->
 						<img class="slide-logo" src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="200px" height"">
 						<p align="left">Connect to the power of the Crwd in your job search.<br>
 							<br>For years, job searches and postings have been run by the companies looking for help. Crwd Hire turns this old model on its head and puts the power in the hands of the Crwd.
-							<br><!-- <br>We post the openings we find each day, and those we hear about at work. -->
+							<br>
 							<br>Person to person networking has always been the best way to find a job. With Crwd Hire the Crwd takes the power back, and makes networking, Crwd powered!</p>
 					</div>
 				</div>
@@ -69,22 +237,20 @@
 					<br>
 					<a href="search.html"><img src="./assets/images/icons/search.png"></a>
 					<a href="addform.html"><img src="./assets/images/icons/add.png"></a>
-				</div>			
+				</div>
 
 		</div>
 	</div>
 </div>
-
-	<!-- jQuery 2.1.4 -->
-  	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script> -->
+	<!-- jQuery Script -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Firebase -->
 	<script type="text/javascript" src="../config/connection-firebase.js"></script>
 	<!-- Local Files -->
   	<script  src="./assets/js/index.js"></script>
-  	<!-- <script src="./assets/js/page-transitions.js"></script> -->
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-       
+
 </body>
 
 </html>
