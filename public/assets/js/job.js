@@ -6,7 +6,10 @@ $(document).ready(function() {
   var jobForm = $("#job");
   var authorSelect = $("#author");
   // Adding an event listener for when the form is submitted
-  $("#job").on("submit", handleFormSubmit);
+  $("#submit-job").on("click", function(event) {
+    console.log("function handle submit works");
+    handleFormSubmit(event);
+  });
   // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
   var url = window.location.search;
   var jobId;
@@ -37,16 +40,27 @@ $(document).ready(function() {
     //   return;
     // }
     // Constructing a newPost object to hand to the database
+
+    var jobCompany = $("#jobCompany").val().trim();
+    var jobTitle = $("#jobTitle").val().trim();
+    var jobType = $("#jobType").val().trim();
+    var jobImage = $("#jobImage").val();
+    var jobPhone = $("#jobPhone").val();
+    var jobEmail = $("#jobEmail").val();
+    var jobURL = $("#jobURL").val();
+    var jobContact = $("#jobContact").val();
+    var jobDescription = $("#jobDescription").val();
+
     var newJob = {
-      jobCompany: jobCompany.val().trim(),
-      jobTitle: jobTitle.val().trim(),
-      jobType: jobType.val().trim(),
-      jobImage: jobImage.val(),
-      jobPhone: jobPhone.val(),
-      jobEmail: jobEmail.val(),
-      jobURL: jobURL.val(), 
-      jobContact: jobContact.val(),
-      jobDescription: jobDescription.val()
+      jobCompany: jobCompany,
+      jobTitle: jobTitle,
+      jobType: jobType,
+      jobImage: jobImage,
+      jobPhone: jobPhone,
+      jobEmail: jobEmail,
+      jobURL: jobURL, 
+      jobContact: jobContact,
+      jobDescription: jobDescription
 
     };
 

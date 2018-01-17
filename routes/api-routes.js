@@ -56,7 +56,7 @@ module.exports = function(app) {
     // then return the result using res.json
     db.Job.create({
       jobTitle: req.body.jobTitle,
-      jobLocation: req.body.jobLocation,
+      jobLocation: "SLC",
       jobDescription: req.body.jobDescription,
       jobCompany: req.body.jobCompany,
       jobPay: req.body.jobPay,
