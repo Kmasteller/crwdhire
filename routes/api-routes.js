@@ -50,8 +50,8 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new post
-  app.post("/jobs", function(req, res) {
-    console.log("we hit /jobs route");
+  app.post("/addform", function(req, res) {
+    console.log("we hit /addform route");
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
     db.Job.create({
