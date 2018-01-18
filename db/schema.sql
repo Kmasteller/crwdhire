@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS crwdhire_db;
 -- Creates the "todolist" database --
 CREATE DATABASE crwdhire_db;
+USE crwdhire_db;
+
 CREATE TABLE jobs (
     id INT NOT NULL AUTO_INCREMENT,
     jobTitle VARCHAR (75) NOT NULL,
@@ -11,6 +13,8 @@ CREATE TABLE jobs (
     jobPhone VARCHAR (20) NULL,
     jobContact VARCHAR (75) NULL,
     jobURL VARCHAR (240) NULL,
-    jobHours BOOLEAN DEFAULT TRUE,
+    jobPartTime BOOLEAN DEFAULT FALSE,
+    jobFullTime BOOLEAN DEFAULT TRUE,
+    jobUnknownTime BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (id)
 );

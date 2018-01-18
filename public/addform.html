@@ -49,15 +49,15 @@
 
 		<div class="lower-screen">
 				<div class="card">
-						<form class="material-form">
+						<form class="material-form" id="job">
 
 							<div class="container">
 								<!-- Text input -->
 								<br>
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="input-item" type="text" required id="input-field">
-										<label for="text">Business Name (required)</label>
+										<input class="input-item" id="jobCompany" type="text" required>
+										<label for="jobCompany">Business Name (required)</label>
 									</div>
 								</div>
 
@@ -65,8 +65,8 @@
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="input-item" type="text" required id="input-field">
-										<label for="text">Job Title (required)</label>
+										<input class="input-item" id="jobTitle" type="text" required>
+										<label for="jobTitle">Job Title (required)</label>
 									</div>
 								</div>
 
@@ -89,6 +89,7 @@
 									<br>
 									<br>
 									<hr>
+
 									</div>
 								</div>
 								<!-- End of radio button group -->
@@ -136,8 +137,10 @@
 
 								<div class="row">
 									<form action="#">
+
 											<div class="file-field input-field btn waves-effect red accent-4">
 												<input type="file" accept="image/*">Upload Photo (required)</input>
+
 											</div>
 									</form>
 								</div>
@@ -146,29 +149,29 @@
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input id="icon_telephone" type="tel" data-error="Invalid phone number." class="validate">
-										<label for="icon_telephone">Phone Number (optional)</label>
+										<input id="jobPhone" type="tel" data-error="Invalid phone number." class="validate">
+										<label for="jobPhone">Phone Number (optional)</label>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input id="email" type="email" class="validate">
-										<label for="email">Business Email (optional)</label>
+										<input  id="jobEmail" type="email" class="validate">
+										<label for="jobEmail">Business Email (optional)</label>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input id="url" type="url" class="validate">
-										<label for="url">Business website (optional)</label>
+										<input id="jobURL" type="url" class="validate">
+										<label for="jobURL">Business website (optional)</label>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="input-item" type="text" required id="input-field">
-										<label for="text">Contact Name at Business (optional)</label>
+										<input class="input-item" id="jobContact" type="text">
+										<label for="jobContact">Contact Name at Business (optional)</label>
 									</div>
 								</div>
 
@@ -176,8 +179,8 @@
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="input-item" type="text" required id="input-field">
-										<label for="text">Job Description & Info (optional)</label>
+										<input class="input-item" id="jobDescription" type="text">
+										<label for="jobDescription">Job Description & Info (optional)</label>
 									</div>
 								</div>
 
@@ -186,8 +189,10 @@
 							<div class="row">
 								<div class="landing-options col s12">
 									<br>
+
 									<button class="btn waves-effect red accent-4" type="submit" name="action">Share with Crwd
 											<i class="material-icons right">cloud_upload</i>
+
 									</button>
 									<br>
 									<br>
@@ -209,12 +214,13 @@
 
 
 
-	<script type="text/javascript" src="../config/connection.js"></script>
+	<script type="text/javascript" src="firebaseconnection.js"></script>
 
 
 <!-- Local JS files -->
 <script  src="./assets/js/form.js"></script>
 <script  src="./assets/js/index.js"></script>
+<script src="./assets/js/job.js"></script>
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
