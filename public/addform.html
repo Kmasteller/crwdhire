@@ -103,7 +103,7 @@
 										<div class="geotag">
 											<p>Tag your location below, click button</p>
 
-											<button onclick="getLocation()" class="btn waves-effect red accent-4">Tag Location<i class="material-icons right">near_me</i></button>
+											<button onclick="getLocation()" class="btn waves-effect red accent-4 smtxt">Tag Location<i class="material-icons right">near_me</i></button>
 
 											<p id="demo"></p>
 
@@ -140,7 +140,7 @@
 								<div class="row">
 									<form action="#">
 
-											<div class="file-field input-field btn waves-effect red accent-4">
+											<div class="file-field input-field btn waves-effect red accent-4 smtxt">
 												<input type="file" accept="image/*">Upload Photo Required</input>
 
 											</div>
@@ -149,8 +149,8 @@
 								<!-- End upload image -->
 								<br>
 								<!-- Choose a Job Category -->
-								<div class="input-field col s12">
-									<select>
+								<div class="input-field col s12 smtxt">
+									<select class="smtxt">
 										<option value="" disabled selected>Choose a job category (required)</option>
 										<option value="1">Healthcare Practitioners and Technical Occupations</option>
 										<option value="2">Healthcare Support Occupations</option>
@@ -213,7 +213,7 @@
 								<div class="landing-options col s12">
 									<br>
 
-									<button class="btn waves-effect red accent-4" id="submit-job" type="submit" name="action" >Share with Crwd<i class="material-icons right">cloud_upload</i></button>
+									<button class="btn waves-effect red accent-4 smtxt" id="submit-job" type="submit" name="action" >Share with Crwd<i class="material-icons right">cloud_upload</i></button>
 
 									</button>
 									<br>
@@ -227,21 +227,16 @@
 	</div>
 </div>
 
-
-
-  
-
-<!-- Firebase Connection -->
-<script type="text/javascript" src="firebaseconnection.js"></script>
-
+<!-- Firebase -->
+	<script type="text/javascript" src="firebaseconnection.js"></script>
 <!-- Local JS files -->
-<script src="/assets/js/job.js"></script>
-<script src="./assets/js/form.js"></script>
-<script src="./assets/js/index.js"></script>
-
+	<script src="./assets/js/job.js"></script>
+	<script src="./assets/js/form.js"></script>
+	<script src="./assets/js/index.js"></script>
 <!-- Compiled and minified JavaScript -->
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- jQuery Script -->
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 
 </body>
 </html>
