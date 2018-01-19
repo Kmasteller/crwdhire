@@ -72,7 +72,9 @@
 
 								<!-- Radio button group -->
 								<div class="radiobuttons">
-									<label>Choose any one option below:</label>
+
+								<label>Choose any one option below:</label>
+
 									<div class="material-input">
 										<input class="input-item" id="test-radio1" name="test" type="radio" required>
 										<label for="test-radio1">PT</label>
@@ -86,26 +88,63 @@
 									<div class="material-input">
 										<input class="input-item" id="test-radio3" name="test" type="radio" required>
 										<label for="test-radio3">??</label>
-										<br>
-										<br>
-										<hr>
 
 									</div>
 								</div>
 								<!-- End of radio button group -->
+								<br>
+								<label>Submit either your Geolocation,<br>if you are at the potential
+									opportunities location,<br>or the locations address below:</label>
+								<br>
+								<br>
+								<div class="row">
+									<form action="#">
+										<div class="geotag">
+											<p>Tag your location below, click button</p>
 
+											<button onclick="getLocation()" class="btn waves-effect red accent-4">Tag Location<i class="material-icons right">near_me</i></button>
+
+											<p id="demo"></p>
+
+												<script>
+												var x = document.getElementById("demo");
+
+												function getLocation() {
+													if (navigator.geolocation) {
+														navigator.geolocation.getCurrentPosition(showPosition);
+													} else {
+														x.innerHTML = "Geolocation is not supported by this browser.";
+													}
+												}
+
+												function showPosition(position) {
+													x.innerHTML = "Latitude: " + position.coords.latitude +
+													"<br>Longitude: " + position.coords.longitude;
+												}
+												</script>
+										</div>
+									</form>
+								</div>
+
+								<div class="row">
+									<div class="input-field col s12">
+										<input class="input-item" type="text" required id="input-field">
+										<label for="text">Location Address (optional)</label>
+									</div>
+								</div>
 								<br>
 
 								<div class="row">
 									<form action="#">
-										<div class="file-field input-field">
-											<div class="btn waves-effect red accent-4 col s12">
-												<span>Upload Photo (required)</span>
-												<input type="file" id="jobImage">
+
+											<div class="file-field input-field btn waves-effect red accent-4">
+												<input type="file" accept="image/*">Upload Photo (required)</input>
+
 											</div>
-										</div>
 									</form>
 								</div>
+
+								<br>
 
 								<div class="row">
 									<div class="input-field col s12">
@@ -147,10 +186,12 @@
 								<!-- End of text input -->
 
 							<div class="row">
-								<div class="landing-options">
+								<div class="landing-options col s12">
 									<br>
-									<button class="btn waves-effect red accent-4" id="submit-job" type="submit" name="action" >Submit
-											<i class="material-icons right">send</i>
+
+									<button class="btn waves-effect red accent-4" id="submit-job" type="submit" name="action" >Share with Crwd
+											<i class="material-icons right">cloud_upload</i>
+
 									</button>
 									<br>
 									<br>
@@ -158,8 +199,6 @@
 							</div>
 							</form>
 				</div>
-				
-
 
 		</div>
 	</div>
@@ -177,14 +216,7 @@
 <script src="./assets/js/form.js"></script>
 <script src="./assets/js/index.js"></script>
 
-
-
-
-
-
 <!-- Compiled and minified JavaScript -->
 
-
 </body>
-
 </html>

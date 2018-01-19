@@ -79,7 +79,8 @@ $(document).ready(function() {
     if (updating) {
       newJob.id = jobId;
       updateJob(newJob);
-      console.log("updating");
+      console.log(newJob);
+
     }
     else {
       submitJob(newJob);
@@ -89,9 +90,11 @@ $(document).ready(function() {
   }
 
   // Submits a new post and brings user to page upon completion
+
   function submitJob(newJob) {
     $.post("/jobs", newJob, function() {
       window.location.href = "/";
+      
     });
   }
 
