@@ -5,6 +5,8 @@ $(document).ready(function() {
   var titleInput = $("#title");
   var jobForm = $("#job");
   var authorSelect = $("#author");
+
+
   // Adding an event listener for when the form is submitted
   $("#submit-job").on("click", function(event) {
     console.log("function handle submit works");
@@ -50,6 +52,11 @@ $(document).ready(function() {
     var jobURL = $("#jobURL").val();
     var jobContact = $("#jobContact").val();
     var jobDescription = $("#jobDescription").val();
+    var jobPartTime = $("#jobPartTime").val();
+    var jobFullTime = $("#jobFullTime").val();
+    var jobUnknownTime = $("#jobUnknownTime").val();
+
+    console.log("Company: "+ jobCompany);
 
     var newJob = {
       jobCompany: jobCompany,
@@ -60,7 +67,10 @@ $(document).ready(function() {
       jobEmail: jobEmail,
       jobURL: jobURL, 
       jobContact: jobContact,
-      jobDescription: jobDescription
+      jobDescription: jobDescription,
+      jobPartTime: jobPartTime,
+      jobFullTime: jobFullTime,
+      jobUnknownTime: jobUnknownTime
 
     };
 
@@ -70,15 +80,19 @@ $(document).ready(function() {
       newJob.id = jobId;
       updateJob(newJob);
       console.log(newJob);
+
     }
     else {
       submitJob(newJob);
+      console.log("new Job");
+      console.log("new job details: " + newJob);
     }
   }
 
   // Submits a new post and brings user to page upon completion
-  function submitJob(job) {
-    $.post("/addform", job, function() {
+
+  function submitJob(newJob) {
+    $.post("/jobs", newJob, function() {
       window.location.href = "/";
       
     });
@@ -88,7 +102,7 @@ $(document).ready(function() {
   function getJobData(id, type) {
     var queryUrl;
     switch (type) {
-      case "job":
+      case "jobs":
         queryUrl = "/add" + id;
         break;
       case "author":
@@ -144,7 +158,7 @@ $(document).ready(function() {
   function updateJob(job) {
     $.ajax({
       method: "PUT",
-      url: "/job",
+      url: "/api/jobs",
       data: job
     })
     .then(function() {

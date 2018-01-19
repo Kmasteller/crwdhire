@@ -49,14 +49,14 @@
 
 		<div class="lower-screen">
 				<div class="card">
-						<form class="material-form" id="job">
+						<form class="material-form" id="job" name="job" method="POST" action="/jobs">
 
 							<div class="container">
 								<!-- Text input -->
 								<br>
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="input-item" id="jobCompany" type="text" required>
+										<input class="input-item" id="jobCompany" name="jobCompany" type="text" required>
 										<label for="jobCompany">Business Name (required)</label>
 									</div>
 								</div>
@@ -65,14 +65,16 @@
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="input-item" id="jobTitle" type="text" required>
+										<input class="input-item" id="jobTitle" name="jobTitle" type="text" required>
 										<label for="jobTitle">Job Title (required)</label>
 									</div>
 								</div>
 
 								<!-- Radio button group -->
 								<div class="radiobuttons">
+
 								<label>Choose any one option below:</label>
+
 									<div class="material-input">
 										<input class="input-item" id="test-radio1" name="test" type="radio" required>
 										<label for="test-radio1">PT</label>
@@ -86,9 +88,6 @@
 									<div class="material-input">
 										<input class="input-item" id="test-radio3" name="test" type="radio" required>
 										<label for="test-radio3">??</label>
-									<br>
-									<br>
-									<hr>
 
 									</div>
 								</div>
@@ -190,7 +189,7 @@
 								<div class="landing-options col s12">
 									<br>
 
-									<button class="btn waves-effect red accent-4" type="submit" name="action">Share with Crwd
+									<button class="btn waves-effect red accent-4" id="submit-job" type="submit" name="action" >Share with Crwd
 											<i class="material-icons right">cloud_upload</i>
 
 									</button>
@@ -200,31 +199,24 @@
 							</div>
 							</form>
 				</div>
-				
-
 
 		</div>
 	</div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
-
-
-
-	<script type="text/javascript" src="firebaseconnection.js"></script>
-
+<script type="text/javascript" src="firebaseconnection.js"></script>
 
 <!-- Local JS files -->
-<script  src="./assets/js/form.js"></script>
-<script  src="./assets/js/index.js"></script>
-<script src="./assets/js/job.js"></script>
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="/assets/js/job.js"></script>
+<script src="./assets/js/form.js"></script>
+<script src="./assets/js/index.js"></script>
 
+<!-- Compiled and minified JavaScript -->
 
 </body>
-
 </html>

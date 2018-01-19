@@ -50,10 +50,17 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new post
-  app.post("/addform", function(req, res) {
-    console.log("we hit /addform route");
+
+  app.post("/jobs", function(req, res) {
+    console.log("we hit /jobs route: ");
+
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
+
+  //   db.Job.create(req.body).then(function (dbJob) {
+  //     res.json(dbJob);
+  //   });
+  // });
     db.Job.create({
       jobTitle: req.body.jobTitle,
       jobLocation: "SLC",
@@ -65,9 +72,11 @@ module.exports = function(app) {
       jobURL: req.body.jobURL,
       jobPartTime: req.body.jobPartTime,
       jobFullTime: req.body.jobFullTime,
-      jobUnknownTime: req.body.jobUnknownTime
+      jobTye: req.body.jobType,
+      jobUnknownTime: false
     }).then(function(results){
       res.json(results);
+      // console.log("results" , results);
     });
 
   });

@@ -7,7 +7,12 @@ module.exports = function(sequelize, DataTypes) {
 
       jobLocation: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
+      },
+
+      jobLocation: {
+        type: DataTypes.STRING,
+        allowNull: true
       },
 
       jobDescription: {
@@ -41,19 +46,19 @@ module.exports = function(sequelize, DataTypes) {
       },
 
       jobPartTime: {
-          type: DataTypes.BOOLEAN,
+          type: DataTypes.STRING,
           allowNull: true,
           defaultValue: false
       },
 
         jobFullTime: {
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.STRING,
             allowNull: true,
             defaultValue: true
         },
 
         jobUnknownTime: {
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.STRING,
             allowNull: true,
             defaultValue: false
         }
