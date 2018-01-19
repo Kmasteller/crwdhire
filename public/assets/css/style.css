@@ -48,9 +48,9 @@ body.nav-open .nav-toggle .icon:after {
   border-radius: 40px;
   background-color: white; */
 }
-.phone .screen {
-  width: 312px;
-  height: 580px;
+.screen {
+  width: 400px;
+  height: 720px;
   background-color: #ECEBE9;
   display: inline-grid !important;
   text-align: center !important;
