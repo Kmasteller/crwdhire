@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Job = sequelize.define("jobs", {
+    var Job = sequelize.define("Job", {
       jobTitle: {
         type: DataTypes.STRING,
         allowNull: false
@@ -7,7 +7,12 @@ module.exports = function(sequelize, DataTypes) {
 
       jobLocation: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
+      },
+
+      jobLocation: {
+        type: DataTypes.STRING,
+        allowNull: true
       },
 
       jobDescription: {
@@ -40,11 +45,23 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: true
       },
 
-      jobHours: {
-          type: DataTypes.BOOLEAN,
+      jobPartTime: {
+          type: DataTypes.STRING,
           allowNull: true,
-          defaultValue: true
-      }
+          defaultValue: false
+      },
+
+        jobFullTime: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: true
+        },
+
+        jobUnknownTime: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        }
 
     });
     return Job;
