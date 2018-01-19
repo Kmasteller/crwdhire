@@ -45,7 +45,7 @@ $(document).ready(function() {
 
     var jobCompany = $("#jobCompany").val().trim();
     var jobTitle = $("#jobTitle").val().trim();
-    var jobType = $("#jobType").val().trim();
+    // var jobType = $("#jobType").val();
     var jobImage = $("#jobImage").val();
     var jobPhone = $("#jobPhone").val();
     var jobEmail = $("#jobEmail").val();
@@ -61,8 +61,8 @@ $(document).ready(function() {
     var newJob = {
       jobCompany: jobCompany,
       jobTitle: jobTitle,
-      jobType: jobType,
-      jobImage: jobImage,
+      // jobType: jobType,
+      // jobImage: jobImage,
       jobPhone: jobPhone,
       jobEmail: jobEmail,
       jobURL: jobURL, 

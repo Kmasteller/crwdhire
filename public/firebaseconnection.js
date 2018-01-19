@@ -35,8 +35,8 @@ $(document).ready(function () {
 
         jobCompany = $("#jobCompany").val().trim();
         jobTitle = $("#jobTitle").val().trim();
-        jobType = $("#jobType").val().trim();
-        jobImage = $("#jobImage").val();
+        // jobType = $("#jobType").val();
+        // jobImage = $("#jobImage").val();
         jobPhone = $("#jobPhone").val();
         jobEmail = $("#jobEmail").val();
         jobURL = $("#jobURL").val();
