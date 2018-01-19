@@ -16,5 +16,6 @@ CREATE TABLE jobs (
     jobPartTime BOOLEAN DEFAULT FALSE,
     jobFullTime BOOLEAN DEFAULT TRUE,
     jobUnknownTime BOOLEAN DEFAULT FALSE,
+    createdAt TIMESTAMP NULL,
     PRIMARY KEY (id)
 );
