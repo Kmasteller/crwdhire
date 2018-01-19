@@ -49,7 +49,7 @@
 
 		<div class="lower-screen">
 				<div class="card">
-						<form class="material-form" id="job" method="POST" action="/jobs">
+						<form class="material-form" id="job" name="job" method="POST" action="/jobs">
 
 							<div class="container">
 								<!-- Text input -->
@@ -71,26 +71,27 @@
 								</div>
 
 								<!-- Radio button group -->
-
-								<div id="jobType"></div>
+								<div class="radiobuttons">
 									<label>Choose any one option below:</label>
-								
 									<div class="material-input">
-									<input class="input-item" id="jobPartTime" name="jobPartTime" type="radio" required>
-									<label for="jobPartTime">Part Time</label>
+										<input class="input-item" id="test-radio1" name="test" type="radio" required>
+										<label for="test-radio1">PT</label>
 									</div>
 
 									<div class="material-input">
-									<input class="input-item" id="jobFullTime" name="jobFullTime" type="radio" required>
-									<label for="jobFullTime">Fulll Time </label>
+										<input class="input-item" id="test-radio2" name="test" type="radio" required>
+										<label for="test-radio2">FT</label>
 									</div>
 
 									<div class="material-input">
-									<input class="input-item" id="jobUnknownTime" name="jobUnknownTime" type="radio" required>
-									<label for="jobUnknownTime">Unknown</label>
+										<input class="input-item" id="test-radio3" name="test" type="radio" required>
+										<label for="test-radio3">??</label>
+										<br>
+										<br>
+										<hr>
+
 									</div>
 								</div>
-
 								<!-- End of radio button group -->
 
 								<br>
@@ -148,7 +149,7 @@
 							<div class="row">
 								<div class="landing-options">
 									<br>
-									<button class="btn waves-effect red accent-4" id="submit-job" name="action" >Submit
+									<button class="btn waves-effect red accent-4" id="submit-job" type="submit" name="action" >Submit
 											<i class="material-icons right">send</i>
 									</button>
 									<br>
@@ -163,23 +164,25 @@
 		</div>
 	</div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
-
-
-
-	<script type="text/javascript" src="firebaseconnection.js"></script>
-
+<script type="text/javascript" src="firebaseconnection.js"></script>
 
 <!-- Local JS files -->
-<script  src="./assets/js/form.js"></script>
-<script  src="./assets/js/index.js"></script>
-<script src="./assets/js/job.js"></script>
+<script src="/assets/js/job.js"></script>
+<script src="./assets/js/form.js"></script>
+<script src="./assets/js/index.js"></script>
+
+
+
+
+
+
 <!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 
 </body>

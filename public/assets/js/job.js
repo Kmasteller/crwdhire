@@ -5,6 +5,8 @@ $(document).ready(function() {
   var titleInput = $("#title");
   var jobForm = $("#job");
   var authorSelect = $("#author");
+
+
   // Adding an event listener for when the form is submitted
   $("#submit-job").on("click", function(event) {
     console.log("function handle submit works");
@@ -50,6 +52,11 @@ $(document).ready(function() {
     var jobURL = $("#jobURL").val();
     var jobContact = $("#jobContact").val();
     var jobDescription = $("#jobDescription").val();
+    var jobPartTime = $("#jobPartTime").val();
+    var jobFullTime = $("#jobFullTime").val();
+    var jobUnknownTime = $("#jobUnknownTime").val();
+
+    console.log("Company: "+ jobCompany);
 
     var newJob = {
       jobCompany: jobCompany,
@@ -60,7 +67,10 @@ $(document).ready(function() {
       jobEmail: jobEmail,
       jobURL: jobURL, 
       jobContact: jobContact,
-      jobDescription: jobDescription
+      jobDescription: jobDescription,
+      jobPartTime: jobPartTime,
+      jobFullTime: jobFullTime,
+      jobUnknownTime: jobUnknownTime
 
     };
 
@@ -69,9 +79,12 @@ $(document).ready(function() {
     if (updating) {
       newJob.id = jobId;
       updateJob(newJob);
+      console.log("updating");
     }
     else {
       submitJob(newJob);
+      console.log("new Job");
+      console.log("new job details: " + newJob);
     }
   }
 
@@ -142,7 +155,7 @@ $(document).ready(function() {
   function updateJob(job) {
     $.ajax({
       method: "PUT",
-      url: "/job",
+      url: "/api/jobs",
       data: job
     })
     .then(function() {

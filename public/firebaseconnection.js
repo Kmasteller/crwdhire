@@ -43,6 +43,10 @@ $(document).ready(function () {
         jobContact = $("#jobContact").val();
         jobDescription = $("#jobDescription").val();
 
+
+
+        
+
         database.ref("/newJobs").push({
             jobCompany: jobCompany,
             jobTitle: jobTitle,
@@ -54,7 +58,7 @@ $(document).ready(function () {
             jobContact: jobContact,
             jobDescription: jobDescription
         });
-        refresh();
+        // refresh();
     });
 
     function refresh() {
