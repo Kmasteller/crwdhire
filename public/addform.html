@@ -97,12 +97,13 @@
 									opportunities location,<br>or the locations address below:</label>
 								<br>
 								<br>
+								<!-- Geotag location -->
 								<div class="row">
 									<form action="#">
 										<div class="geotag">
 											<p>Tag your location below, click button</p>
 
-											<button onclick="getLocation()" class="btn waves-effect red accent-4">Tag Location<i class="material-icons right">near_me</i></button>
+											<button onclick="getLocation()" class="btn waves-effect red accent-4 smtxt">Tag Location<i class="material-icons right">near_me</i></button>
 
 											<p id="demo"></p>
 
@@ -125,28 +126,51 @@
 										</div>
 									</form>
 								</div>
-
+								<!-- End geotag -->
+								<!-- Add manual location address -->
 								<div class="row">
 									<div class="input-field col s12">
 										<input class="input-item" type="text" required id="input-field">
 										<label for="text">Location Address (optional)</label>
 									</div>
 								</div>
+								<!-- End of manual location entry field -->
 								<br>
-
+								<!-- Upload Image -->
 								<div class="row">
 									<form action="#">
 
-											<div class="file-field input-field btn waves-effect red accent-4">
-												<input type="file" accept="image/*">Upload Photo (required)</input>
+											<div class="file-field input-field btn waves-effect red accent-4 smtxt">
+												<input type="file" accept="image/*">Upload Photo Required</input>
 
 											</div>
 									</form>
 								</div>
-
+								<!-- End upload image -->
 								<br>
+								<!-- Choose a Job Category -->
+								<div class="input-field col s12 smtxt">
+									<select class="smtxt">
+										<option value="" disabled selected>Choose a job category (required)</option>
+										<option value="1">Healthcare Practitioners and Technical Occupations</option>
+										<option value="2">Healthcare Support Occupations</option>
+										<option value="3">Business, Executive, Management, and Financial Occupations</option>
+										<option value="4">Architecture and Engineering Occupations</option>
+										<option value="5">Education, Training, and Library Occupations</option>
+										<option value="6">Other Professional Occupations</option>
+										<option value="7">Office and Administrative Support Occupations</option>
+										<option value="8">Services Occupations</option>
+										<option value="9">Agriculture, Maintenance, Repair, and Skilled Crafts Occupations</option>
+										<option value="10">Transportation Occupations</option>
+										<option value="11">Other Occupations</option>
+										<option value="12">Don't Know</option>
+									</select>
+									<label></label>
+								</div>
+								<!-- End of Job Category Options -->
+									<br>
 
-								<div class="row">
+									<div class="row">
 									<div class="input-field col s12">
 										<input id="jobPhone" type="tel" data-error="Invalid phone number." class="validate">
 										<label for="jobPhone">Phone Number (optional)</label>
@@ -189,8 +213,7 @@
 								<div class="landing-options col s12">
 									<br>
 
-									<button class="btn waves-effect red accent-4" id="submit-job" type="submit" name="action" >Share with Crwd
-											<i class="material-icons right">cloud_upload</i>
+									<button class="btn waves-effect red accent-4 smtxt" id="submit-job" type="submit" name="action" >Share with Crwd<i class="material-icons right">cloud_upload</i></button>
 
 									</button>
 									<br>
@@ -203,20 +226,17 @@
 		</div>
 	</div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-
-<script type="text/javascript" src="firebaseconnection.js"></script>
-
+<!-- Firebase -->
+	<script type="text/javascript" src="firebaseconnection.js"></script>
 <!-- Local JS files -->
-<script src="/assets/js/job.js"></script>
-<script src="./assets/js/form.js"></script>
-<script src="./assets/js/index.js"></script>
-
+	<script src="./assets/js/job.js"></script>
+	<script src="./assets/js/form.js"></script>
+	<script src="./assets/js/index.js"></script>
 <!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- jQuery Script -->
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 
 </body>
 </html>

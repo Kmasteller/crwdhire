@@ -22,8 +22,8 @@ body.nav-open .nav-toggle {
           box-shadow: none;
 }
 body.nav-open .nav-toggle:before {
-  width: 1200px;
-  height: 1200px;
+  width: 322px;
+  height: 590px;
   background-color: rgba(0, 0, 0, 0.95);
 }
 body.nav-open .nav-toggle .icon {
@@ -253,4 +253,7 @@ li{
   }
   .radiobuttons{
     justify-content: left !important;
+  }
+  .smtxt{
+    font-size: small;
   }
