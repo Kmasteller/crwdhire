@@ -22,8 +22,8 @@ body.nav-open .nav-toggle {
           box-shadow: none;
 }
 body.nav-open .nav-toggle:before {
-  width: 322px;
-  height: 590px;
+  width: 1200px;
+  height: 1200px;
   background-color: rgba(0, 0, 0, 0.95);
 }
 body.nav-open .nav-toggle .icon {
@@ -256,4 +256,7 @@ li{
   }
   .smtxt{
     font-size: small;
+  }
+  .container-addform{
+    padding:5px !important;
   }
