@@ -36,15 +36,28 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     // console.log("this is our db Job: " , db);
     // Add sequelize code to find all posts, and return them to the user with res.json
-    db.Job.findAll({}).then(function(results) {
+    db.Job.findAll({
+      where: {
+        order: ['createdAt', 'DESC'],
+      },
+      limit: 10
+    }).then(function(results) {
 
-      var topTen = [];
-      for (var i = 0; i < 10; i++) {
-        topTen.push(results[i]);
-      }
+      // var topTen = [];
+      // if (results.length >= 10){
+      //   for (var i = results.length-1; i >= results.length-10; i--) {
+      //     topTen.push(results[i]);
+      //   }
+      // }
+      // else {
+      //   for (var i = results.length - 1; i >= results.length; i--) {
+      //     topTen.push(results[i]);
+      //   }
+      // }
 
       // console.log("results: " , results);
-      res.render("search", { jobs: topTen });
+      // res.render("search", { jobs: topTen });
+      res.render("search", { jobs: results });
     });
 
   });
