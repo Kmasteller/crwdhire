@@ -254,3 +254,6 @@ li{
   .radiobuttons{
     justify-content: left !important;
   }
+  .smtxt{
+    font-size: small;
+  }

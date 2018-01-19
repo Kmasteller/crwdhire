@@ -5,3 +5,7 @@ $(document).bind('change', function(e){
         $(e.target).removeClass('invalid-input');
     }
 });
+
+$(document).ready(function() {
+    $('select').material_select();
+  });
