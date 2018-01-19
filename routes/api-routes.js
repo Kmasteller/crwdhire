@@ -22,13 +22,29 @@ module.exports = function(app) {
 
   });
 
+  // app.registerHelper('each_upto', function (ary, max, options) {
+  //   if (!ary || ary.length == 0)
+  //     return options.inverse(this);
+
+  //   var result = [];
+  //   for (var i = 0; i < max && i < ary.length; ++i)
+  //     result.push(options.fn(ary[i]));
+  //   return result.join('');
+  // });
+
   // GET route for getting all of the posts
   app.get("/search", function(req, res) {
     // console.log("this is our db Job: " , db);
     // Add sequelize code to find all posts, and return them to the user with res.json
     db.Job.findAll({}).then(function(results) {
+
+      var topTen = [];
+      for (var i = 0; i < 10; i++) {
+        topTen.push(results[i]);
+      }
+
       // console.log("results: " , results);
-      res.render("search", { jobs: results });
+      res.render("search", { jobs: topTen });
     });
 
   });
