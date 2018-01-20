@@ -57,8 +57,8 @@ $(document).ready(function() {
     var jobFullTime = $("#jobFullTime").val();
     var jobUnknownTime = $("#jobUnknownTime").val();
 
-    console.log("Company: "+ jobCompany);
-    console.log("jobImage2: " + jobImage2);
+    // console.log("Company: "+ jobCompany);
+    // console.log("jobImage2: " + jobImage2);
 
 
     var newJob = {
@@ -77,20 +77,20 @@ $(document).ready(function() {
 
     };
 
-    console.log("newJob: " , newJob);
+    // console.log("newJob: " , newJob);
 
     // If we're updating a post run updatePost to update a post
     // Otherwise run submitPost to create a whole new post
     if (updating) {
       newJob.id = jobId;
       updateJob(newJob);
-      console.log(newJob);
+      // console.log(newJob);
 
     }
     else {
       submitJob(newJob);
-      console.log("new Job");
-      console.log("new job details: " + newJob);
+      // console.log("new Job");
+      // console.log("new job details: " + newJob);
     }
   }
 
