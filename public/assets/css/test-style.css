@@ -81,7 +81,7 @@ body.nav-open .nav-toggle .icon:after {
     -webkit-transition-timing-function: swing;
             transition-timing-function: swing;
   }
-  .nav-toggle:before {
+.nav-toggle:before {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -97,7 +97,7 @@ body.nav-open .nav-toggle .icon:after {
     -webkit-transition-timing-function: swing;
             transition-timing-function: swing;
   }
-  .nav-toggle .icon {
+.nav-toggle .icon {
     width: 30px;
     height: 4px;
     background-color: red;
@@ -105,12 +105,12 @@ body.nav-open .nav-toggle .icon:after {
     position: absolute;
     top: 28px;
     left: 15px;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    -webkit-transition-duration: 0.75;
+            transition-duration: 0.75s;
     transiting-timing-function: swing;
   }
-  .nav-toggle .icon:before,
-  .nav-toggle .icon:after {
+.nav-toggle .icon:before,
+.nav-toggle .icon:after {
     width: 30px;
     height: 4px;
     background-color: white;
@@ -118,29 +118,29 @@ body.nav-open .nav-toggle .icon:after {
     content: "";
     position: absolute;
     left: 0;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    -webkit-transition-duration: 0.75;
+            transition-duration: 0.75;
     transiting-timing-function: swing;
   }
-  .nav-toggle .icon:before {
+.nav-toggle .icon:before {
     top: -9px !important;
   }
-  .nav-toggle .icon:after {
+.nav-toggle .icon:after {
     top: 9px !important;
   }
-  .nav-main {
+.nav-main {
     display: inline-block;
     align-self: center;
     position: absolute;
     line-height: 8;
     top: 80px;
-    left: 0;
+    left: 15%;
     width: 100%;
     height: 1000%;
     z-index: 9;
     padding: 0 80px;
-    -webkit-transition-duration: 0.66s;
-            transition-duration: 0.66s;
+    -webkit-transition-duration: 0.75;
+            transition-duration: 0.75;
     -webkit-transition-timing-function: swing;
             transition-timing-function: swing;
     -webkit-transform: translateY(100%);
@@ -170,3 +170,22 @@ list{
 .top-logo{
     padding: 30px 0 0 40px;
   }
+.welcome{
+    font-size: 20px;
+  }
+.lower-screen {
+    padding: 0 0 20px 0;
+    overflow-y: scroll;
+    height: auto;
+    -webkit-transition-duration: 0.66s;
+            transition-duration: 0.66s;
+    -webkit-transition-timing-function: swing;
+            transition-timing-function: swing;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+.lower-screen::-webkit-scrollbar {
+    display: none;
+  }
+.slide-logo{
+    padding-left: 40px !important;
+}
