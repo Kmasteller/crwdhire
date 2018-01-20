@@ -9,6 +9,7 @@ CREATE TABLE jobs (
     jobLocation VARCHAR (75) NOT NULL,
     jobDescription VARCHAR (240) NULL,
     jobCompany VARCHAR (75) NOT NULL,
+    jobCategory INTEGER (2) NOT NULL,
     jobPay INTEGER (9) NULL,
     jobPhone VARCHAR (20) NULL,
     jobContact VARCHAR (75) NULL,

@@ -20,6 +20,11 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       },
 
+      jobCategory: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+
       jobCompany: {
           type: DataTypes.STRING,
           allowNull: false

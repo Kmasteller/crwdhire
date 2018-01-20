@@ -40,6 +40,7 @@ module.exports = function(app) {
       where: {
         createdAt: ['createdAt', 'DESC'],
       },
+
       limit: 10
     }).then(function(results) {
 
@@ -109,6 +110,7 @@ module.exports = function(app) {
       jobDescription: req.body.jobDescription,
       jobImage2: req.body.jobImage2,
       jobCompany: req.body.jobCompany,
+      jobCategory: req.body.jobCategory,
       jobPay: req.body.jobPay,
       jobPhone: req.body.jobPhone,
       jobContact: req.body.jobContact,

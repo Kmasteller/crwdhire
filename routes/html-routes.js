@@ -14,12 +14,20 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
   });
 
 
   app.get("/add", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/addform.html"));
+  });
+
+  app.get("/search", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/search.handlebars"));
+  });
+
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/contact.handlebars"));
   });
 
   app.get("/login", function(req, res) {
