@@ -51,6 +51,7 @@ body.nav-open .nav-toggle .icon:after {
     position: fixed !important;
     top: 50% !important;
     left: 50% !important;
+    overflow-y: scroll !important;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     width: 400px !important;
@@ -175,9 +176,8 @@ list{
   }
 .lower-screen {
     padding: 0px 5px 20px 5px;
-    overflow-y: scroll;
-    width:auto;
-    height: auto;
+    overflow-y: scroll !important;
+    height: auto !important;
     -webkit-transition-duration: 0.66s;
             transition-duration: 0.66s;
     -webkit-transition-timing-function: swing;
@@ -221,3 +221,7 @@ list{
     right: 0;
     top: 0;
 }
+.search-options{
+    padding: 0 15px 0 0;
+    line-height: 2px;
+  }
