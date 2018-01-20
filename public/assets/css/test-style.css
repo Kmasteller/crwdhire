@@ -174,8 +174,9 @@ list{
     font-size: 20px;
   }
 .lower-screen {
-    padding: 0 0 20px 0;
+    padding: 0px 5px 20px 5px;
     overflow-y: scroll;
+    width:auto;
     height: auto;
     -webkit-transition-duration: 0.66s;
             transition-duration: 0.66s;
@@ -186,6 +187,37 @@ list{
 .lower-screen::-webkit-scrollbar {
     display: none;
   }
+.card {
+    width: 95%;
+    padding: 2px 2px 0 2px;
+    margin-left:10px;
+    background-color: white;
+    border-radius: 0px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    margin-bottom: 5px;
+  }
+.card h2 {
+    margin-bottom: 5px;
+  }
+.card p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+.card p a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+.card-content {
+    padding: 10px !important;
+}
 .slide-logo{
     padding-left: 40px !important;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
 }
