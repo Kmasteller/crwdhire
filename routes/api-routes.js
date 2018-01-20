@@ -37,9 +37,7 @@ module.exports = function(app) {
     // console.log("this is our db Job: " , db);
     // Add sequelize code to find all posts, and return them to the user with res.json
     db.Job.findAll({
-      where: {
-        order: ['createdAt', 'DESC'],
-      },
+      order: ['createdAt', 'DESC'],
       limit: 10
     }).then(function(results) {
 
