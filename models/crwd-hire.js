@@ -43,6 +43,16 @@ module.exports = function(sequelize, DataTypes) {
       jobContact: {
           type: DataTypes.STRING,
           allowNull: true
+        },
+
+    jobImage2: {
+          type: DataTypes.STRING,
+          allowNull: true
+       },
+
+    jobImage: {
+          type: DataTypes.STRING,
+          allowNull: true
       },
 
       jobURL: {

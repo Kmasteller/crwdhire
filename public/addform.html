@@ -20,7 +20,7 @@
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 	<!-- Local CSS -->
 	<link rel="stylesheet" href="./assets/css/style.css">
-	<link rel="stylesheet" href="./assets/less/style.less">
+	<!-- <link rel="stylesheet" href="./less/css/style.css"> -->
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/png" href="./assets/images/crowdhirelogos/favicon.png"/>
 	<link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
@@ -139,13 +139,14 @@
 								<br>
 								<!-- Upload Image -->
 								<div class="row">
-									<form action="#">
-
-											<div class="file-field input-field btn waves-effect red accent-4 smtxt">
-												<input type="file" accept="image/*">Upload Photo Required</input>
-
+									<!-- <form action="#"> -->
+											<div id="container">
+											<img src="assets/images/now_hiring.jpg" id="jobImage2" width="75%" height="150" style="text-align: center"/>
+												<div class="file-field input-field btn waves-effect red accent-4 smtxt">
+													<input type="file" id="jobImage" accept="image/*">Upload Photo Required</input>
+												</div>
 											</div>
-									</form>
+									<!-- </form> -->
 								</div>
 								<!-- End upload image -->
 								<br>
@@ -231,14 +232,18 @@
 <!-- Firebase -->
 	<script type="text/javascript" src="firebaseconnection.js"></script>
 <!-- Local JS files -->
-<script src="./assets/js/job.js"></script>
-<script src="./assets/js/form.js"></script>
-<script src="./assets/js/index.js"></script>
-<script src="./assets/js/hammer.js"></script>
+	<script src="./assets/js/job.js"></script>
+	<script src="./assets/js/form.js"></script>
+	<script src="./assets/js/index.js"></script>
+	<script src="./assets/js/hammer.js"></script>
 <!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <!-- jQuery Script -->
 	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
+<!-- Cloudinary Script -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="./assets/js/cloudinary.js"></script>
 
 </body>
 </html>
