@@ -4,7 +4,7 @@ CrwdHire is designed for people on the move to share pictures and descriptions o
 job opportunities that others can act on.  It provides real-time opportunities for those 
 looking to get out and get working today.
 
-[Hosted at:] https://crwdhire.herokuapp.com/
+[Hosted at:] (https://crwdhire.herokuapp.com/)
 
 ### USEFUL INFORMATION
 
