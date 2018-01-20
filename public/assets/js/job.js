@@ -46,7 +46,8 @@ $(document).ready(function() {
     var jobCompany = $("#jobCompany").val().trim();
     var jobTitle = $("#jobTitle").val().trim();
     // var jobType = $("#jobType").val();
-    var jobImage = $("#jobImage").val();
+    
+    var jobImage2 = $("#jobImage2").attr("src");
     var jobPhone = $("#jobPhone").val();
     var jobEmail = $("#jobEmail").val();
     var jobURL = $("#jobURL").val();
@@ -57,12 +58,14 @@ $(document).ready(function() {
     var jobUnknownTime = $("#jobUnknownTime").val();
 
     console.log("Company: "+ jobCompany);
+    console.log("jobImage2: " + jobImage2);
+
 
     var newJob = {
       jobCompany: jobCompany,
       jobTitle: jobTitle,
       // jobType: jobType,
-      // jobImage: jobImage,
+      jobImage2: jobImage2,
       jobPhone: jobPhone,
       jobEmail: jobEmail,
       jobURL: jobURL, 
@@ -73,6 +76,8 @@ $(document).ready(function() {
       jobUnknownTime: jobUnknownTime
 
     };
+
+    console.log("newJob: " , newJob);
 
     // If we're updating a post run updatePost to update a post
     // Otherwise run submitPost to create a whole new post
