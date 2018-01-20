@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       },
 
-      jobDescription: {
+      jobCategory: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
