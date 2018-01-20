@@ -31,10 +31,11 @@ body.nav-open .nav-toggle {
         box-shadow: none;
 }
 body.nav-open .nav-toggle:before {
-    width: 1800px;
-    height: 1800px;
+    width: 1600px;
+    height: 1600px;
     background-color: rgba(0, 0, 0, 0.95);
-    z-index: 4;
+    position: absolute;
+    z-index: 5;
 }
 body.nav-open .nav-toggle .icon {
     width: 0;
@@ -42,10 +43,14 @@ body.nav-open .nav-toggle .icon {
 body.nav-open .nav-toggle .icon:before {
     -webkit-transform: translateY(9px) rotate(45deg);
     transform: translateY(9px) rotate(45deg);
+    position: absolute;
+    z-index: 5;
 }
 body.nav-open .nav-toggle .icon:after {
     -webkit-transform: translateY(-9px) rotate(-45deg);
     transform: translateY(-9px) rotate(-45deg);
+    position: absolute;
+    z-index: 5;
 }
 .screen {
     position: fixed !important;
@@ -147,16 +152,16 @@ body.nav-open .nav-toggle .icon:after {
     top: 9px !important;
   }
 .nav-main {
-    display: inline-grid !important;
-    align-self: center;
+    /* display: none; */
+    /* align-self: center; */
     position: absolute;
-    line-height: 8;
+    /* line-height: 8; */
     top: 80px;
-    left: 15%;
+    left: 15px;
     width: 100%;
     height: 1000%;
-    z-index: 3;
-    padding: 0 50px;
+    z-index: 9;
+    padding: 0 20px;
     -webkit-transition-duration: 0.66;
             transition-duration: 0.66;
     -webkit-transition-timing-function: swing;
@@ -164,6 +169,13 @@ body.nav-open .nav-toggle .icon:after {
     -webkit-transform: translateY(100%);
     background-color: transparent;
   }
+.nav-main.off {
+    display: none;
+    transition-delay: 1s;
+}
+.nav-main.on {
+    display: inline-grid !important;
+}
 .nav-main ul li {
   list-style: none;
 }
@@ -179,6 +191,9 @@ body.nav-open .nav-toggle .icon:after {
 .nav-main ul:hover li a {
   opacity: 0.5;
 }
+nav ul{
+    display: inherit !important;
+}
 .nav-main ul:hover li:hover a {
   opacity: 1;
 }
@@ -192,7 +207,7 @@ list{
     font-size: 20px;
   }
 .lower-screen {
-    padding: 0px 5px 20px 5px;
+    padding: 90px 5px 20px 5px;
     /* overflow-y: scroll !important; */
     height: auto !important;
     -webkit-transition-duration: 0.66s;
@@ -200,7 +215,6 @@ list{
     -webkit-transition-timing-function: swing;
             transition-timing-function: swing;
     -webkit-transform: translate3d(0, 0, 0);
-    z-index: 9;
   }
 .lower-screen::-webkit-scrollbar {
     display: none;
@@ -243,3 +257,6 @@ list{
     padding: 0 15px 0 0;
     line-height: 2px;
   }
+  .search-result-title{
+color:black;
+}

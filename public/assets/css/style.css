@@ -247,16 +247,16 @@ li{
     visibility: hidden;
     width: 100%;
   }
-  .current-page {
-    visibility: visible;
-    z-index: 1;
-  }
-  .radiobuttons{
-    justify-content: left !important;
-  }
-  .smtxt{
-    font-size: small;
-  }
-  .container-addform{
-    padding:5px !important;
-  }
+.current-page {
+  visibility: visible;
+  z-index: 1;
+}
+.radiobuttons{
+  justify-content: left !important;
+}
+.smtxt{
+  font-size: small;
+}
+.container-addform{
+  padding:5px !important;
+}
