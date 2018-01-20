@@ -25,7 +25,6 @@ body.nav-open .lower-screen {
 }
 body.nav-open .nav-main {
     -webkit-transform: translateY(0);
-    
 }
 body.nav-open .nav-toggle {
     -webkit-box-shadow: none;
@@ -35,6 +34,7 @@ body.nav-open .nav-toggle:before {
     width: 1800px;
     height: 1800px;
     background-color: rgba(0, 0, 0, 0.95);
+    z-index: 4;
 }
 body.nav-open .nav-toggle .icon {
     width: 0;
@@ -48,6 +48,23 @@ body.nav-open .nav-toggle .icon:after {
     transform: translateY(-9px) rotate(-45deg);
 }
 .screen {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 400px !important;
+    height: 720px !important;
+    background-color: #ECEBE9;
+    display: inline-grid !important;
+    text-align: center !important;
+    margin-top: 0px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+    border: 4px solid #504f4f;
+  }
+  .screen-search {
     position: fixed !important;
     top: 50% !important;
     left: 50% !important;
@@ -106,8 +123,8 @@ body.nav-open .nav-toggle .icon:after {
     position: absolute;
     top: 28px;
     left: 15px;
-    -webkit-transition-duration: 0.75;
-            transition-duration: 0.75s;
+    -webkit-transition-duration: 0.66s;
+            transition-duration: 0.66s;
     transiting-timing-function: swing;
   }
 .nav-toggle .icon:before,
@@ -119,8 +136,8 @@ body.nav-open .nav-toggle .icon:after {
     content: "";
     position: absolute;
     left: 0;
-    -webkit-transition-duration: 0.75;
-            transition-duration: 0.75;
+    -webkit-transition-duration: 0.66;
+            transition-duration: 0.66;
     transiting-timing-function: swing;
   }
 .nav-toggle .icon:before {
@@ -130,7 +147,7 @@ body.nav-open .nav-toggle .icon:after {
     top: 9px !important;
   }
 .nav-main {
-    display: inline-block;
+    display: inline-grid !important;
     align-self: center;
     position: absolute;
     line-height: 8;
@@ -138,10 +155,10 @@ body.nav-open .nav-toggle .icon:after {
     left: 15%;
     width: 100%;
     height: 1000%;
-    z-index: 9;
-    padding: 0 70px;
-    -webkit-transition-duration: 0.75;
-            transition-duration: 0.75;
+    z-index: 3;
+    padding: 0 50px;
+    -webkit-transition-duration: 0.66;
+            transition-duration: 0.66;
     -webkit-transition-timing-function: swing;
             transition-timing-function: swing;
     -webkit-transform: translateY(100%);
@@ -156,8 +173,8 @@ body.nav-open .nav-toggle .icon:after {
   color: white;
   text-decoration: none;
   font-size: 20px;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  -webkit-transition-duration: 0.66s;
+          transition-duration: 0.66s;
 }
 .nav-main ul:hover li a {
   opacity: 0.5;
@@ -176,13 +193,14 @@ list{
   }
 .lower-screen {
     padding: 0px 5px 20px 5px;
-    overflow-y: scroll !important;
+    /* overflow-y: scroll !important; */
     height: auto !important;
     -webkit-transition-duration: 0.66s;
             transition-duration: 0.66s;
     -webkit-transition-timing-function: swing;
             transition-timing-function: swing;
     -webkit-transform: translate3d(0, 0, 0);
+    z-index: 9;
   }
 .lower-screen::-webkit-scrollbar {
     display: none;
