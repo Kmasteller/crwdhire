@@ -1,2 +1,2 @@
 INSERT INTO jobs (jobTitle, jobLocation, jobDescription, jobCategory, jobCompany, jobPay, jobPhone, jobContact, jobURL, jobPartTime, jobFullTime, jobUnknownTime)
-VALUES ("Merry Maid", "Draper, UT", "Cleaning homes", "8", "Merry Maids", 15, "801.555.5555", "Marky Mark", "www.google.com", false, true, false);
+VALUES ("Merry Maid", "Draper, UT", "Cleaning homes", 8, "Merry Maids", 15, "801.555.5555", "Marky Mark", "www.google.com", false, true, false);
