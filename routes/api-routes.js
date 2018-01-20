@@ -106,6 +106,7 @@ module.exports = function(app) {
       jobLocation: "SLC",
       jobDescription: req.body.jobDescription,
       jobCompany: req.body.jobCompany,
+      jobCategory: req.body.jobCategory,
       jobPay: req.body.jobPay,
       jobPhone: req.body.jobPhone,
       jobContact: req.body.jobContact,
