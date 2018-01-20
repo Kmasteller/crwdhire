@@ -1,10 +1,12 @@
-CRWDHIRE APP
+# CRWDHIRE APP V 1.0
 An app for crowdsourcing employement opportunities.  Built as a mobile application
 CrwdHire is designed for people on the move to share pictures and descriptions of various
 job opportunities that others can act on.  It provides real-time opportunities for those 
 looking to get out and get working today.
 
-USEFUL INFORMATION
+![Hosted at:] https://crwdhire.herokuapp.com/
+
+### USEFUL INFORMATION
 
 Key for Categories:
 1 Healthcare Practitioners and Technical Occupations
@@ -19,3 +21,9 @@ Key for Categories:
 10 Transportation Occupations
 11 Other Occupations
 12 Don't Know
+
+### Contributors
+Sal Giani
+Kristoffer Keene
+Matt Stringham
+Kenneth Masteller
