@@ -108,6 +108,8 @@ module.exports = function(app) {
       jobTitle: req.body.jobTitle,
       jobLocation: "SLC",
       jobDescription: req.body.jobDescription,
+      jobCategory: req.body.jobCategory,
+      jobTime: req.body.jobTime,
       jobImage2: req.body.jobImage2,
       jobCompany: req.body.jobCompany,
       jobCategory: req.body.jobCategory,
@@ -115,10 +117,10 @@ module.exports = function(app) {
       jobPhone: req.body.jobPhone,
       jobContact: req.body.jobContact,
       jobURL: req.body.jobURL,
-      jobPartTime: req.body.jobPartTime,
-      jobFullTime: req.body.jobFullTime,
-      jobTye: req.body.jobType,
-      jobUnknownTime: false
+      // jobPartTime: req.body.jobPartTime,
+      // jobFullTime: req.body.jobFullTime,
+      jobType: req.body.jobType,
+      // jobUnknownTime: false
     }).then(function(results){
       res.json(results);
       // console.log("results" , results);

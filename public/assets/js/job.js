@@ -5,8 +5,7 @@ $(document).ready(function() {
   var titleInput = $("#title");
   var jobForm = $("#job");
   var authorSelect = $("#author");
-
-
+  
   // Adding an event listener for when the form is submitted
   $("#submit-job").on("click", function(event) {
     console.log("function handle submit works");
@@ -45,25 +44,35 @@ $(document).ready(function() {
 
     var jobCompany = $("#jobCompany").val().trim();
     var jobTitle = $("#jobTitle").val().trim();
+    var jobCategory = parseInt($("#jobCat option:selected").val());
     // var jobType = $("#jobType").val();
-    
+    var radio = document.getElementsByName('jobTime');
     var jobImage2 = $("#jobImage2").attr("src");
     var jobPhone = $("#jobPhone").val();
     var jobEmail = $("#jobEmail").val();
     var jobURL = $("#jobURL").val();
     var jobContact = $("#jobContact").val();
     var jobDescription = $("#jobDescription").val();
-    var jobPartTime = $("#jobPartTime").val();
-    var jobFullTime = $("#jobFullTime").val();
-    var jobUnknownTime = $("#jobUnknownTime").val();
-
+    // var jobPartTime = $("#jobPartTime").val();
+    // var jobFullTime = $("#jobFullTime").val();
+    // var jobUnknownTime = $("#jobUnknownTime").val();
+    function radioSelect() {
+      for (var i = 0, length = radio.length; i < length; i++) {
+        if (radio[i].checked) {
+          return radio[i].value;
+        }
+      }
+    };
+    console.log(radioSelect(), "RadioSelect Here");
+    console.log(jobCategory, "JobCat Here");
     // console.log("Company: "+ jobCompany);
     // console.log("jobImage2: " + jobImage2);
-
 
     var newJob = {
       jobCompany: jobCompany,
       jobTitle: jobTitle,
+      jobCategory: jobCategory,
+      jobTime: radioSelect(),
       // jobType: jobType,
       jobImage2: jobImage2,
       jobPhone: jobPhone,
@@ -71,9 +80,9 @@ $(document).ready(function() {
       jobURL: jobURL, 
       jobContact: jobContact,
       jobDescription: jobDescription,
-      jobPartTime: jobPartTime,
-      jobFullTime: jobFullTime,
-      jobUnknownTime: jobUnknownTime
+      // jobPartTime: jobPartTime,
+      // jobFullTime: jobFullTime,
+      // jobUnknownTime: jobUnknownTime
 
     };
 
