@@ -33,4 +33,4 @@ Kristoffer Keene
 Matt Stringham
 Kenneth Masteller
 
-###### ©CRWDHIRE 2018
+###### © CRWDHIRE 2018
