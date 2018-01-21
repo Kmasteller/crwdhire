@@ -8,7 +8,7 @@ looking to get out and get working today.
 
 ### USEFUL INFORMATION
 
-Key for Categories:
+#### Key for Categories:
 1 Healthcare Practitioners and Technical Occupations
 2 Healthcare Support Occupations
 3 Business, Executive, Management, and Financial Occupations
@@ -21,6 +21,11 @@ Key for Categories:
 10 Transportation Occupations
 11 Other Occupations
 12 Don't Know
+
+#### Key for JobTime
+0 Unknown
+1 Part-time
+2 Full-time
 
 ### Contributors
 Sal Giani
