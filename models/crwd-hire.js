@@ -50,23 +50,22 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: true
       },
 
-      jobPartTime: {
-          type: DataTypes.STRING,
-          allowNull: true,
-          defaultValue: false
+      jobTime: {
+          type: DataTypes.INTEGER,
+          allowNull: false
       },
 
-        jobFullTime: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            defaultValue: true
-        },
+        // jobFullTime: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        //     defaultValue: true
+        // },
 
-        jobUnknownTime: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            defaultValue: false
-        },
+        // jobUnknownTime: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        //     defaultValue: false
+        // },
 
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
