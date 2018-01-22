@@ -78,6 +78,32 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: false
         },
 
+        jobTagCity: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+        jobTagCounty: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+        jobTagState: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+        jobTagAddress: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+
+
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
 

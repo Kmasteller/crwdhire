@@ -122,8 +122,16 @@
 												function showPosition(position) {
 													x.innerHTML = "Latitude: " + position.coords.latitude +
 													"<br>Longitude: " + position.coords.longitude;
+
+													var lat = position.coords.latitude;
+													var long = position.coords.longitude;
+
+													searchLocation(lat, long);
+													
 												}
+
 												</script>
+												
 										</div>
 									</form>
 								</div>
@@ -149,6 +157,45 @@
 									<!-- </form> -->
 								</div>
 								<!-- End upload image -->
+
+								<!-- Upload Image TEST1 -->
+								<div class="row">
+									<!-- <form action="#"> -->
+											<div id="container">
+											<!-- <img src="assets/images/now_hiring.jpg" id="jobImage3" width="75%" height="150" style="text-align: center"/> -->
+												<div class="file-field input-field btn waves-effect red accent-4 smtxt">
+													<input type="file" accept="image/*" multiple="multiple" capture="camera">Test camera multiple</input>
+												</div>
+											</div>
+									<!-- </form> -->
+								</div>
+								<!-- End upload image -->
+								<!-- Upload Image TEST2 -->
+								<div class="row">
+									<!-- <form action="#"> -->
+											<div id="container">
+											<!-- <img src="assets/images/now_hiring.jpg" id="jobImage4" width="75%" height="150" style="text-align: center"/> -->
+												<div class="file-field input-field btn waves-effect red accent-4 smtxt">
+													<input type="file" accept="image/*;capture=camera">Test ; capture camera</input>
+												</div>
+											</div>
+									<!-- </form> -->
+								</div>
+								<!-- End upload image -->
+								<!-- Upload Image TEST3-->
+								<div class="row">
+									<!-- <form action="#"> -->
+											<div id="container">
+											<!-- <img src="assets/images/now_hiring.jpg" id="jobImage5" width="75%" height="150" style="text-align: center"/> -->
+												<div class="file-field input-field btn waves-effect red accent-4 smtxt">
+													<input type="file" name="image" accept="image/*" capture="environment">Test capture environment</input>
+
+												</div>
+											</div>
+									<!-- </form> -->
+								</div>
+								<!-- End upload image -->
+
 								<br>
 								<!-- Choose a Job Category -->
 								<div class="input-field col s12 smtxt" id="jobCategory">
@@ -236,6 +283,7 @@
 	<script src="./assets/js/form.js"></script>
 	<script src="./assets/js/index.js"></script>
 	<script src="./assets/js/hammer.js"></script>
+		<script src="./assets/js/reversegeocode.js"></script>
 <!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <!-- jQuery Script -->

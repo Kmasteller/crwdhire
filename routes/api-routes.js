@@ -64,24 +64,30 @@ module.exports = function(app) {
   });
 
 
-
-  // Get route for returning posts of a specific category
-  app.get("/all/category/:category", function(req, res) {
-    // Add sequelize code to find all posts where the category is equal to req.params.category,
-    // return the result to the user with res.json
+  // Get route for returning posts of a specific job location
+  app.get("/all/location/:jobLocation", function (req, res) {
     db.Job.findAll({
       where: {
-        category: req.params.category
+        jobLocation: req.params.jobLocation
+      },
+    }).then(function (results) {
+      res.json(results);
+    });
+  });
+
+  // Get route for returning posts of a specific job category
+  app.get("/all/category/:jobCategory", function(req, res) {
+    db.Job.findAll({
+      where: {
+        jobCategory: req.params.jobCategory
       },
     }).then(function(results) {
       res.json(results);
     });
   });
 
-  // Get route for retrieving a single post
+  // Get route for retrieving a single ID
   app.get("/all/:id", function(req, res) {
-    // Add sequelize code to find a single post where the id is equal to req.params.id,
-    // return the result to the user with res.json
     db.Job.findAll({
       where: {
         id: req.params.id
