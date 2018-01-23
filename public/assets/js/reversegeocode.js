@@ -29,8 +29,47 @@ function searchLocation (lat, long) {
 
         console.log(json.results[0].formatted_address);
         var tagAddress = json.results[0].formatted_address;
-
+        showAddress(tagAddress);
+        showCity(tagCity);
+        showState(tagState);
+        showCounty(tagCounty);
       }
     });
 
   }
+
+function showAddress(address) {
+  $("#jobTagAddress").text(address);
+}
+
+function showCity(city) {
+  $("#jobTagCity").text(city);
+}
+
+function showState(state) {
+  $("#jobTagState").text(state);
+}
+
+function showCounty(county) {
+  $("#jobTagCounty").text(county);
+}
+
+
+// method: "GET"
+//     }).done(function (response) {
+//   console.log(response);
+
+//   // Getting the third row of the table
+//   var thirdRowTds = $("table")
+//     .children()
+//     .eq(1)
+//     .children("tr")
+//     .eq(2)
+//     .children("td");
+
+//   // Setting text of the thirdRowTds
+//   thirdRowTds.eq(0).text(response.Title);
+
+//   thirdRowTds.eq(1).text(response.Year);
+
+//   thirdRowTds.eq(2).text(response.Actors);

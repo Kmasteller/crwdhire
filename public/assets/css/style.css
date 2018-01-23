@@ -260,3 +260,7 @@ li{
 .container-addform{
   padding:5px !important;
 }
+
+#jobTagCity, #jobTagState, #jobTagCounty {
+  display: none;
+}

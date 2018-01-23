@@ -53,6 +53,11 @@ $(document).ready(function() {
     var jobURL = $("#jobURL").val();
     var jobContact = $("#jobContact").val();
     var jobDescription = $("#jobDescription").val();
+    var jobInputAddress = $("#jobInputAddress").val();
+    var jobTagAddress = $("#jobTagAddress").text();
+    var jobTagCity = $("#jobTagCity").text();
+    var jobTagState = $("#jobTagState").text();
+    var jobTagCounty = $("#jobTagCounty").text();
     // var jobPartTime = $("#jobPartTime").val();
     // var jobFullTime = $("#jobFullTime").val();
     // var jobUnknownTime = $("#jobUnknownTime").val();
@@ -80,6 +85,11 @@ $(document).ready(function() {
       jobURL: jobURL, 
       jobContact: jobContact,
       jobDescription: jobDescription,
+      jobInputAddress: jobInputAddress,
+      jobTagAddress: jobTagAddress,
+      jobTagCity: jobTagCity,
+      jobTagState: jobTagState,
+      jobTagCounty: jobTagCounty,
       // jobPartTime: jobPartTime,
       // jobFullTime: jobFullTime,
       // jobUnknownTime: jobUnknownTime

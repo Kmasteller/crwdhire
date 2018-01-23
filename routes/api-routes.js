@@ -126,6 +126,11 @@ module.exports = function(app) {
       // jobPartTime: req.body.jobPartTime,
       // jobFullTime: req.body.jobFullTime,
       jobType: req.body.jobType,
+      jobInputAddress: req.body.jobInputAddress,
+      jobTagAddress: req.body.jobTagAddress,
+      jobTagCity: req.body.jobTagCity,
+      jobTagState: req.body.jobTagState,
+      jobTagCounty: req.body.jobTagCounty,
       // jobUnknownTime: false
     }).then(function(results){
       res.json(results);

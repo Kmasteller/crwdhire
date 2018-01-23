@@ -63,7 +63,13 @@ module.exports = function(sequelize, DataTypes) {
       jobTime: {
           type: DataTypes.INTEGER,
           allowNull: false
-      },
+        },
+
+        jobInputAddress: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
 
         // jobFullTime: {
         //     type: DataTypes.STRING,
