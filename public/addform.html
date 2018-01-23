@@ -120,10 +120,23 @@
 												}
 
 												function showPosition(position) {
-													x.innerHTML = "Latitude: " + position.coords.latitude +
+													x.innerHTML = "<br>Latitude: " + position.coords.latitude +
 													"<br>Longitude: " + position.coords.longitude;
+
+													var lat = position.coords.latitude;
+													var long = position.coords.longitude;
+
+													searchLocation(lat, long);
+													
 												}
+
 												</script>
+												<div id="jobTagAddress"></div>
+												<div id="jobTagCity"></div>
+												<div id="jobTagState"></div>
+												<div id="jobTagCounty"></div>
+												
+												
 										</div>
 									</form>
 								</div>
@@ -131,7 +144,7 @@
 								<!-- Add manual location address -->
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="input-item" type="text" required id="input-field">
+										<input class="input-item" type="text" id="jobInputAddress">
 										<label for="text">Location Address (optional)</label>
 									</div>
 								</div>
@@ -141,15 +154,15 @@
 								<div class="row">
 									<!-- <form action="#"> -->
 											<div id="container">
-											<img src="assets/images/now_hiring.jpg" id="jobImage2" width="75%" height="150" style="text-align: center"/>
 												<div class="file-field input-field btn waves-effect red accent-4 smtxt">
 													<input type="file" id="jobImage" accept="image/*">Upload Photo Required</input>
 												</div>
+											<br><br>
+											<img src="assets/images/now_hiring.jpg" id="jobImage2" width="75%" height="150" style="text-align: center" />
 											</div>
 									<!-- </form> -->
 								</div>
 								<!-- End upload image -->
-								<br>
 								<!-- Choose a Job Category -->
 								<div class="input-field col s12 smtxt" id="jobCategory">
 									<select class="smtxt" id="jobCat">
@@ -236,6 +249,7 @@
 	<script src="./assets/js/form.js"></script>
 	<script src="./assets/js/index.js"></script>
 	<script src="./assets/js/hammer.js"></script>
+		<script src="./assets/js/reversegeocode.js"></script>
 <!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <!-- jQuery Script -->

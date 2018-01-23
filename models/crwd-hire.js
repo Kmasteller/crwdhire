@@ -63,7 +63,13 @@ module.exports = function(sequelize, DataTypes) {
       jobTime: {
           type: DataTypes.INTEGER,
           allowNull: false
-      },
+        },
+
+        jobInputAddress: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
 
         // jobFullTime: {
         //     type: DataTypes.STRING,
@@ -76,6 +82,32 @@ module.exports = function(sequelize, DataTypes) {
         //     allowNull: true,
         //     defaultValue: false
         // },
+
+        jobTagCity: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+        jobTagCounty: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+        jobTagState: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+        jobTagAddress: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
+
+
 
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
