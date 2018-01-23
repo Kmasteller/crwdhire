@@ -7,6 +7,4 @@ $('.nav-toggle').click(function(){
 
 	$('.nav-main').toggleClass('off on');
 	
-
-
 });
