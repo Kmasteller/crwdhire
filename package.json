@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Crowd Sourcing Job Listings",
   "main": "server.js",
+  "engines": {
+    "node": "9.2.0"
+  },
   "dependencies": {
     "blueimp-file-upload": "^9.19.3",
     "body-parser": "^1.18.2",
