@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crwd Hire App</title>
+
+	<!-- jQuery Script -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<!-- Materialize Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- AJAX -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+	<!-- Local CSS -->
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="./assets/images/crowdhirelogos/favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
+  
+</head>
+
+<body>
+
+  <div class="phone">
+	<div class="screen">
+		
+		<nav class="nav-1">
+			<ul id="list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="search.html">Search</a></li>
+					<li><a href="addform.html">Add</a></li>
+					<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div>
+			<img class="top-logo" src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="200px" height"">
+		</div>
+		<div class="nav-toggle">
+			<div class="icon"></div>
+		</div>
+		<div class="search-options">
+			<br>
+			<img src="./assets/images/icons/sort.png">
+			<img src="./assets/images/icons/filter.png">
+		</div>
+		<div class="search-result-title">
+			<p>⬇︎ Crwd Posts from last 24 hours ⬇︎</p>
+		</div>
+		<div class="lower-screen">
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="./assets/images/postimages/hayattplace.jpg">
+					</div>
+					<div class="card-content">
+						<h5>Part Time<hr>Housekeepers</h5>
+						<p>Hyatt Place Station Park</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Part Time<hr>Housekeeper<i class="material-icons right close">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="./assets/images/postimages/extraspacestorage.jpg">
+					</div>
+					<div class="card-content">
+						<h5>Full Time<hr>Attendant</h5>
+						<p>Extra Space Storage</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Full Time<hr>Attendant<i class="material-icons right close">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="./assets/images/postimages/cinemark.jpg">
+					</div>
+					<div class="card-content">
+						<h5>Part Time<hr>Customer Service</h5>
+						<p>Cinemark Station Park</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Part Time<hr>Customer Service<i class="material-icons right close">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="./assets/images/postimages/mercedes-benz.jpg">
+					</div>
+					<div class="card-content">
+						<h5>Full Time<hr>Sales</h5>
+						<p>Mercedes-Benz Farmington</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Full Time<hr>Sales<i class="material-icons right close">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="./assets/images/postimages/h&m.jpg">
+					</div>
+					<div class="card-content">
+						<h5>Part Time<hr>Retail Sales</h5>
+						<p>H && M Station Park</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Part Time<hr>Retail Sales<i class="material-icons right close">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="./assets/images/postimages/javiers.jpg">
+					</div>
+					<div class="card-content">
+						<h5>Part Time<hr>Server</h5>
+						<p>Javier's Farmington</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Part Time<hr>Server<i class="material-icons right close">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="./assets/images/postimages/lagoon.jpg">
+					</div>
+					<div class="card-content">
+						<h5>Part Time<hr>Ride Attendant</h5>
+						<p>Lagoon</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Part Time<hr>Ride Attendant<i class="material-icons right close">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+
+		</div>
+	</div>
+</div>
+
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+
+	
+
+
+
+
+  <!-- Firebase -->
+  <script type="text/javascript" src="firebaseconnection.js"></script>
+  <!-- Local JS files -->
+	  <script src="./assets/js/job.js"></script>
+	  <script src="./assets/js/form.js"></script>
+	  <script src="./assets/js/index.js"></script>
+	  <script src="./assets/js/hammer.js"></script>
+  <!-- Compiled and minified JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- jQuery Script -->
+	  <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
+</body>
+
+</html>
