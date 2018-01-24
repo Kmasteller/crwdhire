@@ -23,41 +23,43 @@
   </head>
   <body>
     <!-- This section is for what will look like the phone screen -->
-    <div class="screen">
+    <div class="screen-search">
     <nav class=""><!--black-->
         <div class="nav-wrapper">
           <div class=""><!--container-->
 
                 <!-- Navigation -->
                 <nav class="nav-main off">
-                        <ul id="list">
-                            <li><a href="/index">Home</a></li>
-                            <br>
-                            <li><a href="/search">Search</a></li>
-                            <br>
-                            <li><a href="addform.html">Add</a></li>
-                            <!-- <br>
-                            <li><a href="contact.html">Contact</a></li> -->
-                        </ul>
-                    </nav>
+                    <ul id="list">
+                        <li><a href="/index">Home</a></li>
+                        <br>
+                        <li><a href="/search">Search</a></li>
+                        <br>
+                        <li><a href="addform.html">Add</a></li>
+                        <!-- <br>
+                        <li><a href="contact.html">Contact</a></li> -->
+                    </ul>
+                </nav>
                     <!--Top logo for every page -->
-                    <div>
+                <div>
                         <img class="top-logo" src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="200px" height"">
-                    </div>
+                </div>
                     <!--Main Nav for every page -->
-                    <div class="nav-toggle">
+                <div class="nav-toggle">
                         <div class="icon"></div>
-                    </div>
+                </div>
           </div>
         </div>
     </nav>
+        {{{body}}}
+</div>  
 
 
-  <div class="container">
+  {{!-- <div class="container">
       
-    <br><br>
+    <br><br> --}}
 {{!-- Handlebars inserts here --}}
-    {{{body}}}
+
 
     {{!-- <br><br>
 
@@ -65,7 +67,7 @@
    
 		<br><br> --}}
 
-  </div>
+  {{!-- </div> --}}
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Materialize JS CDN -->
