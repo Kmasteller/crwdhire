@@ -1,4 +1,5 @@
 var express = require("express");
+var upload = require('jquery-file-upload-middleware');
 var bodyParser = require("body-parser");
 var app = express();
 

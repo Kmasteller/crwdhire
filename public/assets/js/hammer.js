@@ -2641,4 +2641,3 @@
   }
   
   })(window, document, 'Hammer');
-  

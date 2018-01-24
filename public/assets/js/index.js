@@ -6,7 +6,6 @@ $('.nav-toggle').click(function(){
 	// });
 
 	$('.nav-main').toggleClass('off on');
-
 });
 
 $(document).ready(function(){
@@ -35,3 +34,4 @@ $('.modal').modal({
 	complete: function() { alert('Closed'); } // Callback for Modal close
   }
 );
+

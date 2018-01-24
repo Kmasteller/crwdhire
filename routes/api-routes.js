@@ -13,32 +13,81 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the posts
-  app.get("/all", function(req, res) {
+  app.get("/all", function (req, res) {
     // console.log("this is our db Job: " , db);
     // Add sequelize code to find all posts, and return them to the user with res.json
-    db.Job.findAll({}).then(function(results) {
+    db.Job.findAll({}).then(function (results) {
       res.json(results);
     });
 
   });
 
-  // Get route for returning posts of a specific category
-  app.get("/all/category/:category", function(req, res) {
-    // Add sequelize code to find all posts where the category is equal to req.params.category,
-    // return the result to the user with res.json
+  // app.registerHelper('each_upto', function (ary, max, options) {
+  //   if (!ary || ary.length == 0)
+  //     return options.inverse(this);
+
+  //   var result = [];
+  //   for (var i = 0; i < max && i < ary.length; ++i)
+  //     result.push(options.fn(ary[i]));
+  //   return result.join('');
+  // });
+
+  // GET route for getting all of the posts
+  app.get("/search", function(req, res) {
+    // console.log("this is our db Job: " , db);
+    // Add sequelize code to find all posts, and return them to the user with res.json
     db.Job.findAll({
       where: {
-        category: req.params.category
+        createdAt: ['createdAt', 'DESC'],
+      },
+
+      limit: 10
+    }).then(function(results) {
+
+      // var topTen = [];
+      // if (results.length >= 10){
+      //   for (var i = results.length-1; i >= results.length-10; i--) {
+      //     topTen.push(results[i]);
+      //   }
+      // }
+      // else {
+      //   for (var i = results.length - 1; i >= results.length; i--) {
+      //     topTen.push(results[i]);
+      //   }
+      // }
+
+      // console.log("results: " , results);
+      // res.render("search", { jobs: topTen });
+      res.render("search", { jobs: results });
+    });
+
+  });
+
+
+  // Get route for returning posts of a specific job location
+  app.get("/all/location/:jobLocation", function (req, res) {
+    db.Job.findAll({
+      where: {
+        jobLocation: req.params.jobLocation
+      },
+    }).then(function (results) {
+      res.json(results);
+    });
+  });
+
+  // Get route for returning posts of a specific job category
+  app.get("/all/category/:jobCategory", function(req, res) {
+    db.Job.findAll({
+      where: {
+        jobCategory: req.params.jobCategory
       },
     }).then(function(results) {
       res.json(results);
     });
   });
 
-  // Get route for retrieving a single post
+  // Get route for retrieving a single ID
   app.get("/all/:id", function(req, res) {
-    // Add sequelize code to find a single post where the id is equal to req.params.id,
-    // return the result to the user with res.json
     db.Job.findAll({
       where: {
         id: req.params.id
@@ -65,15 +114,24 @@ module.exports = function(app) {
       jobTitle: req.body.jobTitle,
       jobLocation: "SLC",
       jobDescription: req.body.jobDescription,
+      jobCategory: req.body.jobCategory,
+      jobTime: req.body.jobTime,
+      jobImage2: req.body.jobImage2,
       jobCompany: req.body.jobCompany,
+      jobCategory: req.body.jobCategory,
       jobPay: req.body.jobPay,
       jobPhone: req.body.jobPhone,
       jobContact: req.body.jobContact,
       jobURL: req.body.jobURL,
-      jobPartTime: req.body.jobPartTime,
-      jobFullTime: req.body.jobFullTime,
-      jobTye: req.body.jobType,
-      jobUnknownTime: false
+      // jobPartTime: req.body.jobPartTime,
+      // jobFullTime: req.body.jobFullTime,
+      jobType: req.body.jobType,
+      jobInputAddress: req.body.jobInputAddress,
+      jobTagAddress: req.body.jobTagAddress,
+      jobTagCity: req.body.jobTagCity,
+      jobTagState: req.body.jobTagState,
+      jobTagCounty: req.body.jobTagCounty,
+      // jobUnknownTime: false
     }).then(function(results){
       res.json(results);
       // console.log("results" , results);

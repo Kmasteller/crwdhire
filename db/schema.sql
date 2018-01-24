@@ -9,12 +9,15 @@ CREATE TABLE jobs (
     jobLocation VARCHAR (75) NOT NULL,
     jobDescription VARCHAR (240) NULL,
     jobCompany VARCHAR (75) NOT NULL,
+    jobCategory INTEGER (2) NOT NULL,
+    jobTime INTEGER(1) NOT NULL,
     jobPay INTEGER (9) NULL,
     jobPhone VARCHAR (20) NULL,
     jobContact VARCHAR (75) NULL,
     jobURL VARCHAR (240) NULL,
-    jobPartTime BOOLEAN DEFAULT FALSE,
-    jobFullTime BOOLEAN DEFAULT TRUE,
-    jobUnknownTime BOOLEAN DEFAULT FALSE,
+    -- jobPartTime BOOLEAN DEFAULT FALSE,
+    -- jobFullTime BOOLEAN DEFAULT TRUE,
+    -- jobUnknownTime BOOLEAN DEFAULT FALSE,
+    createdAt TIMESTAMP NULL,
     PRIMARY KEY (id)
 );

@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 
     var jobCompany = "";
+    var jobCategory = "";
     var jobTitle = "";
     var jobType = "";
     var jobImage = "";
@@ -35,6 +36,7 @@ $(document).ready(function () {
 
         jobCompany = $("#jobCompany").val().trim();
         jobTitle = $("#jobTitle").val().trim();
+        jobCategory = $("#jobCategory");
         // jobType = $("#jobType").val();
         // jobImage = $("#jobImage").val();
         jobPhone = $("#jobPhone").val();
@@ -49,6 +51,7 @@ $(document).ready(function () {
 
         database.ref("/newJobs").push({
             jobCompany: jobCompany,
+            jobCategory: jobCategory,
             jobTitle: jobTitle,
             jobType: jobType,
             jobImage: jobImage,
@@ -63,6 +66,7 @@ $(document).ready(function () {
 
     function refresh() {
         $("#jobCompany").val("");
+        $("#jobCategory").val("");
         $("#jobTitle").val("");
         $("#jobType").val("");
         // jobImage = "";
@@ -80,6 +84,7 @@ $(document).ready(function () {
 
         // Log everything that's coming out of snapshot
         console.log(childSnapshot.val().jobCompany);
+        console.log(childSnapshot.val().jobCategory);
         console.log(childSnapshot.val().jobTitle);
         console.log(childSnapshot.val().jobType);
         console.log(childSnapshot.val().jobPhone);
