@@ -1,117 +1,88 @@
 module.exports = function(sequelize, DataTypes) {
     var Job = sequelize.define("Job", {
-    jobTitle: {
-    type: DataTypes.STRING,
-    allowNull: false
-    },
+        jobTitle: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+            
+        jobDescription: {
+            type: DataTypes.TEXT,
+            allowNull: true
+        },
 
-    jobLocation: {
-    type: DataTypes.STRING,
-    allowNull: true
-    },
+        jobCategory: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
 
-    jobLocation: {
-    type: DataTypes.STRING,
-    allowNull: true
-    },
+        jobCompany: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
 
-    jobDescription: {
-    type: DataTypes.TEXT,
-    allowNull: true
-    },
+        jobPay: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
 
-    jobCategory: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-    },
+        jobTime: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
 
-    jobCompany: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
+        jobPhone: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
 
-    jobPay: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    },
+        jobContact: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
 
-    jobPhone: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
+        jobImage2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
 
-    jobContact: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
+        jobURL: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
 
-    jobImage2: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
+        jobInputAddress: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
 
-    jobImage: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
+        jobTagCity: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
 
-    jobURL: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
+        jobTagCounty: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
 
-    jobTime: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
+        jobTagState: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
 
-    jobInputAddress: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        defaultValue: false
-    },
+        jobTagAddress: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: false
+        },
 
-    // jobFullTime: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true,
-    //     defaultValue: true
-    // },
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE,
 
-    // jobUnknownTime: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true,
-    //     defaultValue: false
-    // },
-
-    jobTagCity: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        defaultValue: false
-    },
-
-    jobTagCounty: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        defaultValue: false
-    },
-
-    jobTagState: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        defaultValue: false
-    },
-
-    jobTagAddress: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        defaultValue: false
-    },
-
-
-
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE,
-
-    });
+     });
     return Job;
 };
