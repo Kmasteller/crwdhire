@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -22,8 +23,17 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/addform.html"));
   });
 
-  app.get("/search", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/search.handlebars"));
+  app.get("/search", function (req, res) {
+    db.Job.findAll({
+      // where: {
+      //   createdAt: ['createdAt', 'DESC'],
+      // },
+
+      limit: 10
+    }).then(function (results) {
+      console.log("results: ", results);
+      res.render("search", { jobs: results });
+    });
   });
 
   app.get("/contact", function(req, res) {
