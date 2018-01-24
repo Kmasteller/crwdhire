@@ -1,4 +1,4 @@
-//cloudinary.cloudinary_js_config()
+// Cloudinary
 var cloudinaryKeys = cloudinary.config({
     cloud_name: 'crwdhire',
     api_key: '434593679894516',
