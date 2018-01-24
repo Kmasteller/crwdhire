@@ -104,19 +104,25 @@
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
 
-                        <img class="activator" src="http://via.placeholder.com/350x150">
+                        <img class="activator" src="{{this.jobImage2}}">
                     </div>
                     <div class="card-content">
                         <h5>{{this.jobType}}
                             <hr>{{this.jobTitle}}</h5>
-                        <p>{{this.jobCompany}}, {{this.jobLocation}}</p>
+                        <p>{{this.jobCompany}}</p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">{{this.jobType}}
                             <hr>{{this.jobTitle}}
                             <i class="material-icons right close">close</i>
                         </span>
-                        <p>{{this.jobDescription}}</p>
+                        <p><h6> Description: </h6> {{this.jobDescription}}</p>
+                        <p><h6> Company: </h6> {{this.jobCompany}}</p>
+                        {{!-- <p><h6>Category: </h6>{{this.jobCategory}}</p> --}}
+                        <p><h6>Shift:</h6> {{this.jobTime}}</p>
+                        <p><h6>Phone Number:</h6> {{this.jobPhone}}</p>
+                        <p><h6>Contact:</h6> {{this.jobContact}}</p>
+                        <p><h6>Company URL: </h6>{{this.jobURL}}</p>
 
                     </div>
                 </div>

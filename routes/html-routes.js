@@ -28,7 +28,7 @@ module.exports = function(app) {
       // where: {
       //   createdAt: ['createdAt', 'DESC'],
       // },
-
+      // order: ['createdAt', 'DESC'],
       limit: 10
     }).then(function (results) {
       console.log("results: ", results);
