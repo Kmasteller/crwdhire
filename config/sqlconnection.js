@@ -1,4 +1,3 @@
-//OLD - not needed with Sequelize
 // Setup SQL
 var mysql = require("mysql");
 var connection;
