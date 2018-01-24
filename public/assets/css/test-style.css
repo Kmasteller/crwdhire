@@ -207,7 +207,7 @@ list{
     font-size: 20px;
   }
 .lower-screen {
-    padding: 90px 5px 20px 5px;
+    padding: 0px 5px 20px 5px;
     /* overflow-y: scroll !important; */
     height: auto !important;
     -webkit-transition-duration: 0.66s;
@@ -229,6 +229,7 @@ list{
     overflow: hidden;
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
     margin-bottom: 5px;
+
   }
 .card h2 {
     margin-bottom: 5px;
@@ -260,3 +261,14 @@ list{
   .search-result-title{
 color:black;
 }
+.material-form{
+    padding:10px !important;
+    background: transparent !important;
+}
+.select-dropdown{
+    padding:0px !important;
+}
+.container-addform{
+    padding:5px !important;
+}
+
