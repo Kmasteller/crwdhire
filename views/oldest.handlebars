@@ -1,0 +1,143 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Crwd Hire</title>
+
+    <!-- jQuery Script -->
+	    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Material Icon CDN -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Your custom styles -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./less/css/style.css">
+    <!-- Favicon -->
+	    <link rel="shortcut icon" type="image/png" href="./assets/images/crowdhirelogos/favicon.png"/>
+	    <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
+    <!-- End of head script and link tags -->
+
+  </head>
+
+<body> --}}
+
+ <!-- Modal Structure -->
+  {{!-- <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div> --}}
+<!-- end materialize modal code -->
+    <!-- This section is for what will look like the phone screen -->
+    {{!-- <div class="screen-search">
+    <nav><!--black-->
+        <div class="nav-wrapper">
+          <div class=""><!--container-->
+                <!-- Navigation -->
+                <nav class="nav-main off">
+                        <ul id="list">
+                            <li><a href="index.html">Home</a></li>
+                            <br>
+                            <li><a href="search.html">Search</a></li>
+                            <br>
+                            <li><a href="addform.html">Add</a></li>
+                            <!-- <br>
+                            <li><a href="contact.html">Contact</a></li> -->
+                        </ul>
+                    </nav>
+                    <!--Top logo for every page -->
+                    <div>
+                        <img class="top-logo" src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="200px" height"">
+                    </div>
+                    <!--Main Nav for every page -->
+                    <div class="nav-toggle">
+                        <div class="icon"></div>
+                    </div>
+          </div>
+        </div>
+       
+    </nav> --}}
+
+    <!-- Our content here -->
+      <main>
+        <!-- screen content -->
+        <!-- Search options Sort and Filter -->
+            <div class="search-options">
+                    <br>
+                   <a href="sortandfilter.html"><img src="./assets/images/icons/filter.png"></a>
+            </div>
+        <!-- end -->
+
+            <!-- Label identifying currently visible sorting choice -->
+            <div class="search-result-title">
+                <p>⬇︎ Crwd Posts from last 24 hours ⬇︎</p>
+            </div>
+            <!-- end -->
+        <div class="lower-screen">
+                <!-- Job post Card -->
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="./assets/images/postimages/hayattplace.jpg">
+                        </div>
+                        <div class="card-content">
+                            <h5>Part Time<hr>Housekeepers</h5>
+                            <p>Hyatt Place Station Park</p>
+                        </div>
+                    <!-- Hidden Card Content -->
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Part Time<hr>Housekeeper<i class="material-icons right close">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    <!-- End of Hidden Card Content -->
+                    </div>
+                <!-- end of card -->
+
+                {{#each jobs}}
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+
+                        <img class="activator" src="{{this.jobImage2}}">
+                    </div>
+                    <div class="card-content">
+                        <h5>{{this.jobType}}
+                            <hr>{{this.jobTitle}}</h5>
+                        <p>{{this.jobCompany}}</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{this.jobType}}
+                            <hr>{{this.jobTitle}}
+                            <i class="material-icons right close">close</i>
+                        </span>
+                        <p><h6> Description: </h6> {{this.jobDescription}}</p>
+                        <p><h6> Company: </h6> {{this.jobCompany}}</p>
+                        {{!-- <p><h6>Category: </h6>{{this.jobCategory}}</p> --}}
+                        <p><h6>Shift:</h6> {{this.jobTime}}</p>
+                        <p><h6>Phone Number:</h6> {{this.jobPhone}}</p>
+                        <p><h6>Contact:</h6> {{this.jobContact}}</p>
+                        <p><h6>Company URL: </h6>{{this.jobURL}}</p>
+
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+    </main>
+
+    {{!-- </div> --}}
+    <!-- jQuery CDN -->
+        {{!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Materialize JS CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Local JS files -->
+		<script src="./assets/js/job.js"></script>
+		<script src="./assets/js/form.js"></script>
+		<script src="./assets/js/index.js"></script> --}}
+  {{!-- </body>
+</html> --}}

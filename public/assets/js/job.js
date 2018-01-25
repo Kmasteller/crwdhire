@@ -117,7 +117,7 @@ $(document).ready(function() {
 
   function submitJob(newJob) {
     $.post("/jobs", newJob, function() {
-      window.location.href = "/";
+      window.location.href = "/search";
       
     });
   }
