@@ -22,24 +22,15 @@ module.exports = function(app) {
 
   });
 
-  // app.registerHelper('each_upto', function (ary, max, options) {
-  //   if (!ary || ary.length == 0)
-  //     return options.inverse(this);
-
-  //   var result = [];
-  //   for (var i = 0; i < max && i < ary.length; ++i)
-  //     result.push(options.fn(ary[i]));
-  //   return result.join('');
-  // });
 
   // GET route for getting all of the posts
   app.get("/search", function(req, res) {
     // console.log("this is our db Job: " , db);
     // Add sequelize code to find all posts, and return them to the user with res.json
     db.Job.findAll({
-      where: {
-        createdAt: ['createdAt', 'DESC'],
-      },
+      // where: {
+      //   order: ['createdAt', 'DESC'],
+      // },
 
       limit: 10
     }).then(function(results) {
@@ -63,28 +54,81 @@ module.exports = function(app) {
 
   });
 
+// Get route for returning posts of a specific job location
+app.get("/all/ascending", function (req, res) {
+  db.Job.findAll({
+    where: {
+      createdAt: ['createdAt', 'ASC']
+    },
+  }).then(function (results) {
+    res.render("search", { jobs: results });
+  });
+});
+
 
   // Get route for returning posts of a specific job location
-  app.get("/all/location/:jobLocation", function (req, res) {
+  app.get("/all/jobLocation/:jobLocation", function (req, res) {
     db.Job.findAll({
       where: {
-        jobLocation: req.params.jobLocation
+        jobLocation: req.params.jobLocation,
+        createdAt: ['createdAt', 'DESC']
       },
     }).then(function (results) {
-      res.json(results);
+      res.render("search", { jobs: results });
     });
   });
 
   // Get route for returning posts of a specific job category
+  app.get("/all/jobCategory/:jobCategory", function(req, res) {
+    db.Job.findAll({
+      where: {
+        jobCategory: req.params.jobCategory,
+        createdAt: ['createdAt', 'DESC']
+      },
+    }).then(function(results) {
+      res.render("search", { jobs: results });
+    });
+  });
+
+  // Get route for returning posts of a specific job shcedule
+    app.get("/all/jobTime/:jobTime", function(req, res) {
+      db.Job.findAll({
+        where: {
+          jobTime: req.params.jobTime,
+          createdAt: ['createdAt', 'DESC']
+        },
+      }).then(function(results) {
+        res.render("search", { jobs: results });
+      });
+    });
+
+
+    // Get route for returning posts of a specific job shcedule
+    app.get("/all/category/:jobTime", function(req, res) {
+      db.Job.findAll({
+        where: {
+          jobTime: req.params.jobTime,
+          createdAt: ['createdAt', 'DESC']
+        },
+        limit: 10
+      }).then(function(results) {
+        res.render("search", { jobs: results });
+      });
+    });
+
+
+
+      // Get route for returning posts of a specific job category
   app.get("/all/category/:jobCategory", function(req, res) {
     db.Job.findAll({
       where: {
         jobCategory: req.params.jobCategory
       },
     }).then(function(results) {
-      res.json(results);
+      res.render("search", { jobs: results });
     });
   });
+
 
   // Get route for retrieving a single ID
   app.get("/all/:id", function(req, res) {
@@ -112,7 +156,6 @@ module.exports = function(app) {
   // });
     db.Job.create({
       jobTitle: req.body.jobTitle,
-      jobLocation: "SLC",
       jobDescription: req.body.jobDescription,
       jobCategory: req.body.jobCategory,
       jobTime: req.body.jobTime,

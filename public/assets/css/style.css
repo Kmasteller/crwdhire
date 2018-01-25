@@ -272,3 +272,12 @@ color:black;
     padding:5px !important;
 }
 
+#jobTagCity, #jobTagState, #jobTagCounty {
+    display: none;
+}
+
+h6 {
+
+   font-size: 14px;
+   font-weight: bold; 
+}

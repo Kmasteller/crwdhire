@@ -32,7 +32,7 @@
                         <ul id="list">
                             <li><a href="index.html">Home</a></li>
                             <br>
-                            <li><a href="search.html">Search</a></li>
+                            <li><a href="/search">Search</a></li>
                             <br>
                             <li><a href="addform.html">Add</a></li>
                             <!-- <br>
@@ -81,28 +81,28 @@
                 </div>
     <!-- end job title input -->
 
-    <!-- Choose job hours radio button group -->
+								<!-- Choose job hours radio button group -->
                 <div class="radiobuttons">
                     <label>Choose any one option below:</label>
                         <div class="material-input">
-                            <input class="input-item" id="test-radio1" name="test" type="radio" value="2" required>
+                            <input class="input-item" id="test-radio1" name="jobTime" type="radio" value="2" required>
                             <label for="test-radio1">Full Time</label>
                         </div>
 
                         <div class="material-input">
-                            <input class="input-item" id="test-radio2" name="test" type="radio" value="1" required>
+                            <input class="input-item" id="test-radio2" name="jobTime" type="radio" value="1" required>
                             <label for="test-radio2">Part Time</label>
                         </div>
 
                         <div class="material-input">
-                            <input class="input-item" id="test-radio3" name="test" type="radio" value="0" required>
+                            <input class="input-item" id="test-radio3" name="jobTime" type="radio" value="0" required>
                             <label for="test-radio3">Unknown</label>
                         </div>
-                    <br>
+                        <br>
                 </div>
-    <!-- End of radio button group -->
+								<!-- End of radio button group -->
 
-    <!-- Directions for Geotag or Address Input -->
+              <!-- Directions for Geotag or Address Input -->
                 <br>
                 <label>Submit either your Geolocation,<br>if you are at the potential
                     opportunities location,<br>or the locations address below:</label>
@@ -130,57 +130,70 @@
                                 }
 
                                 function showPosition(position) {
-                                    x.innerHTML = "Latitude: " + position.coords.latitude +
-                                    "<br>Longitude: " + position.coords.longitude;
-                                }
-                            </script>
-                        </div>
-                    </form>
-                </div>
-    <!-- End geotag -->
+                                    x.innerHTML = "<br>Latitude: " + position.coords.latitude +
+                                    "<br>Longitude: " + position.coords.longitude;													var lat = position.coords.latitude;
+                                    var lat = position.coords.latitude;
+                                    var long = position.coords.longitude;
 
-    <!-- Add manual location address -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input class="input-item" type="text" required id="input-field">
-                        <label for="text">Location Address (optional)</label>
-                    </div>
-                </div>
-    <!-- End of manual location entry field -->
+                                    searchLocation(lat, long);
+                                     }
+                                  </script>
+                                  <div id="jobTagAddress"></div>
+                                  <div id="jobTagCity"></div>
+                                  <div id="jobTagState"></div>
+                                  <div id="jobTagCounty"></div>
+                          </div>
+                      </form>
+                  </div>
+                                <!-- End geotag -->
 
-    <!-- Upload Image -->
-                <div class="row">
-                    <form action="#">
-                            <div class="file-field input-field btn waves-effect red accent-4 smtxt">
-                                <input type="file" accept="image/*">Upload Photo Required<i class="material-icons right">photo_camera</i></input>
+								<!-- Add manual location address -->
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input class="input-item" type="text" id="jobInputAddress">
+                                                    <label for="text">Location Address (optional)</label>
+                                                </div>
+                                            </div>
+								<!-- End of manual location entry field -->
+                                            <br>
+								<!-- Upload Image -->
+                                            <div class="row">
+                                                <!-- <form action="#"> -->
+                                                        <div id="container">
+                                                            <div class="file-field input-field btn waves-effect red accent-4 smtxt">
+                                                                <input type="file" id="jobImage" accept="image/*">Upload Photo Required<i class="material-icons right">photo_camera</i></input>
 
-                            </div>
-                    </form>
-                </div>
-                <!-- End upload image -->
-                <br>
-                <!-- Choose a Job Category -->
-                <div class="row">
-                    <div class="input-field col s12 smtxt">
-                        <select class="smtxt">
-                            <option value="0" disabled selected>︎︎︎︎Choose a job category (required)</option>
-                            <option value="1">Healthcare</option>
-                            <option value="2">Healthcare Support</option>
-                            <option value="3">Business Management and Financial</option>
-                            <option value="4">Architecture and Engineering</option>
-                            <option value="5">Educational</option>
-                            <option value="6">Other Professional Occupations</option>
-                            <option value="7">Office Admin</option>
-                            <option value="8">Services ans Retail</option>
-                            <option value="9">Agriculture or Maintenance</option>
-                            <option value="10">Transportation</option>
-                            <option value="11">Other Occupations</option>
-                            <option value="12">Don't Know</option>
-                        </select>
-                        <label>Choose a job category (required)</label>
-                    </div>
-                </div>
-        <!-- End of Job Category Options -->
+                                                            </div>
+                                                        <br><br>
+                                                        <img src="assets/images/now_hiring.jpg" id="jobImage2" width="75%" height="150" style="text-align: center" />
+                                                        </div>
+                                                <!-- </form> -->
+                                            </div>
+								<!-- End upload image -->
+								<br>
+                                <!-- Choose a Job Category -->
+                                            <div class="row">
+                                                <div class="input-field col s12 smtxt" id="jobCategory">
+                                                    <select class="smtxt" id="jobCat">
+                                                        <option value="0" disabled selected>︎︎︎︎Choose a job category (required)</option>
+                                                        <option value="1">Healthcare</option>
+                                                        <option value="2">Healthcare Support</option>
+                                                        <option value="3">Business Management and Financial</option>
+                                                        <option value="4">Architecture and Engineering</option>
+                                                        <option value="5">Educational</option>
+                                                        <option value="6">Other Professional Occupations</option>
+                                                        <option value="7">Office Admin</option>
+                                                        <option value="8">Services ans Retail</option>
+                                                        <option value="9">Agriculture or Maintenance</option>
+                                                        <option value="10">Transportation</option>
+                                                        <option value="11">Other Occupations</option>
+                                                        <option value="12">Don't Know</option>
+                                                    </select>
+                                                    <label>Choose a job category (required)</label>
+                                                </div>
+                                            </div>
+								<!-- End of Job Category Options -->
+
 
         <!-- Phone Numebr entry-->
                 <div class="row">
@@ -249,8 +262,13 @@
     <!-- Materialize JS CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- Local JS files -->
-        <script src="./assets/js/job.js"></script>
-        <script src="./assets/js/form.js"></script>
+
+		<script src="./assets/js/job.js"></script>
+		<script src="./assets/js/form.js"></script>
         <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/reversegeocode.js"></script>
+     <!-- Cloudinary Script -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./assets/js/cloudinary.js"></script>  
 </body>
 </html>
