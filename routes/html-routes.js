@@ -25,10 +25,14 @@ module.exports = function(app) {
 
   app.get("/search", function (req, res) {
     db.Job.findAll({
-      // where: {
-      //   createdAt: ['createdAt', 'DESC'],
-      // },
-      // order: ['createdAt', 'DESC'],
+      where: {
+        createdAt: {
+          $ne: null
+        }
+      },
+      order: [
+        [ 'createdAt', 'DESC']
+      ],
       limit: 10
     }).then(function (results) {
       console.log("results: ", results);
