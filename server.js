@@ -24,10 +24,8 @@ var routes = require("./config/sqlconnection.js");
 
 // app.use("/", routes);
 
-
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
-
 
 // app.listen(port, function () {
 //     console.log("we are running on port " + port)
