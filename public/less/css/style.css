@@ -254,3 +254,7 @@
   left: 5px;
   top: 7px;
 }
+
+.errorMessages {
+  color: red;
+}

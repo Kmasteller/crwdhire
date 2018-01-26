@@ -83,7 +83,7 @@
 
 								<!-- Choose job hours radio button group -->
                 <div class="radiobuttons">
-                    <label>Choose any one option below:</label>
+                    <label>Choose any one option below (required):</label>
                         <div class="material-input">
                             <input class="input-item" id="test-radio1" name="jobTime" type="radio" value="2" required>
                             <label for="test-radio1">Full Time</label>
@@ -105,7 +105,7 @@
               <!-- Directions for Geotag or Address Input -->
                 <br>
                 <label>Submit either your Geolocation,<br>if you are at the potential
-                    opportunities location,<br>or the locations address below:</label>
+                    opportunity's location,<br>or enter the address below:</label>
                 <br>
                 <br>
     <!-- Geotag location -->
@@ -193,7 +193,7 @@
                                                         <option value="13">Other Occupations</option>
                                                         <option value="14">Don't Know</option>
                                                     </select>
-                                                    <label>Choose a job category (required)</label>
+                                                    <!-- <label>Choose a job category (required)</label> -->
                                                 </div>
                                             </div>
 								<!-- End of Job Category Options -->
@@ -255,6 +255,7 @@
                     </div>
                 </div>
             <!-- end of submit button -->
+            <ul class="errorMessages"></ul>
             </form>
             <!-- End of Add job form -->
         </div>
@@ -271,6 +272,7 @@
 		<script src="./assets/js/form.js"></script>
         <script src="./assets/js/index.js"></script>
         <script src="./assets/js/reversegeocode.js"></script>
+        <script src="./assets/js/validation.js"></script>
      <!-- Cloudinary Script -->
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="./assets/js/cloudinary.js"></script>  
