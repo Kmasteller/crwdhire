@@ -1,0 +1,31 @@
+.nav-wrapper{
+    background-color: #eeeeee;
+}
+i.icon-black {
+    color: black;
+}
+.brand-logo{
+    margin-top: 5px !important;
+}
+.black-text{
+    color:black !important;
+}
+.card{
+    margin-top: 2px;
+    max-width: 425px;
+    /* left: 50% !important; */
+}
+.welcome{
+    font-size: 24px;
+    align-content: center !important;
+}
+.landing-options{
+    align-content: center;
+    line-height: 20px;
+}
+.page-footer{
+    padding-top: 10px;
+}
+.footer-copyright{
+    background-color: #424242 !important;
+}
