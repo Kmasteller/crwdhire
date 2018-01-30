@@ -43,4 +43,6 @@ i.icon-black {
     margin: 0px !important;
     padding: 10px !important;
     background: white !important;
+    max-width: 425px !important;
+    min-width: 400px !important;
 }
