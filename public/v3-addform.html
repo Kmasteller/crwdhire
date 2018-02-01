@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>CRWD HIRE.com</title>
+
+    <!-- Material Icon CDN -->
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Materialize CSS CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Your custom styles -->
+        <link rel="stylesheet" href="./assets/css/v3-style.css">
+        <link rel="stylesheet" href="./less/css/style.css">
+    <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="./assets/images/crowdhirelogos/favicon.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/crowdhirelogos/favicon.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/crowdhirelogos/favicon.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/crowdhirelogos/favicon.png"></link>
+        <link rel="manifest" href="assets/img/fav/manifest.json"></link>
+        <link rel="shortcut icon" href="./assets/images/crowdhirelogos/favicon.png"></link>
+    <!-- End of head script and link tags -->
+
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        }
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+
+    <!-- Full Size Menu -->
+        <div class="navbar-fixed">
+            
+        <nav class="grey lighten-3">
+            
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="#" class="brand-logo"><img src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="" height="50px"></a>
+                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons icon-black">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="./v3-index.html" class="black-text">Home</a></li>
+                            <li><a href="/search" class="black-text">Search</a></li>
+                            <li><a href="./v3-addform.html" class="black-text">Add</a></li>
+                            <li><a href="./v3-resources.html" class="black-text">Resources</a></li>
+                        </ul>
+
+    
+                </div>
+            </div>
+            
+    </nav>
+    </div>
+    <!-- Mobile Menu -->
+        <ul class="side-nav" id="mobile-menu">
+            <!-- <a><i class="material-icons right close icon-black button-collapse">close</i></a> -->
+            <li>
+                
+                <div class="userView">
+                    <div class="">
+                    <img src="./assets/images/worlddotscrop.png" width="100%" alt="Background Sidenav">
+                    </div>
+                    <!-- <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
+                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+                </div>
+            </li>
+
+            <li><a href="./v3-index.html"><i class="material-icons">home</i>Home</a></li>
+            <li><a href="/search"><i class="material-icons">search</i>Search Posts</a></li>
+            <li><a href="./v3-addform.html"><i class="material-icons">add</i>Add New Posts</a></li>
+            <li><a href="./v3-resources.html"><i class="material-icons">insert_drive_file</i>Employment Resources</a></li>
+        </ul>
+    </header>
+
+    <main>
+    <!-- Your content here -->
+
+    <!-- Animated Gif and Main Logo Card -->
+    <div class="card">
+        <!-- Add Job Form -->
+    <form class="material-form" id="job" name="job" method="POST" action="/jobs">
+
+    <div class="container-addform">
+        <!-- Business name text input -->
+        <br>
+        <div class="row">
+            <div class="input-field col s12">
+                <input class="input-item" id="jobCompany" name="jobCompany" type="text" required>
+                <label for="jobCompany">Business Name (required)</label>
+            </div>
+        </div>
+<!-- end business name test input -->
+
+<!-- Job title text input -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input class="input-item" id="jobTitle" name="jobTitle" type="text" required>
+                <label for="jobTitle">Job Title (required)</label>
+            </div>
+        </div>
+<!-- end job title input -->
+
+                        <!-- Choose job hours radio button group -->
+        <div class="radiobuttons">
+            <label>Choose any one option below (required):</label>
+                <div class="material-input">
+                    <input class="input-item" id="test-radio1" name="jobTime" type="radio" value="2" required>
+                    <label for="test-radio1">Full Time</label>
+                </div>
+
+                <div class="material-input">
+                    <input class="input-item" id="test-radio2" name="jobTime" type="radio" value="1" required>
+                    <label for="test-radio2">Part Time</label>
+                </div>
+
+                <div class="material-input">
+                    <input class="input-item" id="test-radio3" name="jobTime" type="radio" value="0" required>
+                    <label for="test-radio3">Unknown</label>
+                </div>
+                <br>
+        </div>
+                        <!-- End of radio button group -->
+
+      <!-- Directions for Geotag or Address Input -->
+        <br>
+        <label>Submit either your Geolocation,<br>if you are at the potential
+            opportunity's location,<br>or enter the address below:</label>
+        <br>
+        <br>
+<!-- Geotag location -->
+        <div class="row">
+            <form action="#">
+                <div class="geotag">
+                    <label>Tag your location below, click button</label><br>
+
+                    <button onclick="getLocation()" class="btn waves-effect red accent-4 smtxt">Tag Location<i class="material-icons right">near_me</i></button>
+
+                    <p id="demo"></p>
+
+                    <script>
+                        var x = document.getElementById("demo");
+
+                        function getLocation() {
+                            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(showPosition);
+                            } else {
+                                x.innerHTML = "Geolocation is not supported by this browser.";
+                            }
+                        }
+
+                        function showPosition(position) {
+                            x.innerHTML = "<br>Latitude: " + position.coords.latitude +
+                            "<br>Longitude: " + position.coords.longitude;													var lat = position.coords.latitude;
+                            var lat = position.coords.latitude;
+                            var long = position.coords.longitude;
+
+                            searchLocation(lat, long);
+                             }
+                          </script>
+                          <div id="jobTagAddress"></div>
+                          <div id="jobTagCity"></div>
+                          <div id="jobTagState"></div>
+                          <div id="jobTagCounty"></div>
+                  </div>
+              </form>
+          </div>
+                        <!-- End geotag -->
+
+                        <!-- Add manual location address -->
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input class="input-item" type="text" id="jobInputAddress">
+                                            <label for="text">Location Address (optional)</label>
+                                        </div>
+                                    </div>
+                        <!-- End of manual location entry field -->
+                                    
+                        <!-- Upload Image -->
+                                    <div class="row">
+                                        <!-- <form action="#"> -->
+                                                <div id="container">
+                                                    <div class="file-field input-field btn waves-effect red accent-4 smtxt">
+                                                        <input type="file" id="jobImage" accept="image/*">Upload Photo Required<i class="material-icons right">photo_camera</i></input>
+
+                                                    </div>
+                                                <br><br>
+                                                <div id=image-container>
+                                                    <img src="assets/images/now_hiring.jpg" id="jobImage2" width="150px" height="" style="text-align: center" />
+                                                </div>
+                                            </div>
+                                        <!-- </form> -->
+                                    </div>
+                        <!-- End upload image -->
+                        <br>
+                        <!-- Choose a Job Category -->
+                                    <div class="row">
+                                        <div class="input-field col s12 smtxt" id="jobCategory">
+                                            <select class="smtxt" id="jobCat">
+                                                <option value="0" disabled selected>︎︎︎︎Choose a job category (required)</option>
+                                                <option value="1">Healthcare</option>
+                                                <option value="2">Healthcare Support</option>
+                                                <option value="3">Business, Management and Financial</option>
+                                                <option value="4">Architecture and Engineering</option>
+                                                <option value="5">Educational</option>
+                                                <option value="6">Other Professional Occupations</option>
+                                                <option value="7">Office Administration</option>
+                                                <option value="8">Services, Retail and Sales</option>
+                                                <option value="9">Agriculture and Maintenance</option>
+                                                <option value="10">Maintenance and Janatorial</option>
+                                                <option value="11">Construction</option>
+                                                <option value="12">Transportation</option>
+                                                <option value="13">Other Occupations</option>
+                                                <option value="14">Don't Know</option>
+                                            </select>
+                                            <!-- <label>Choose a job category (required)</label> -->
+                                        </div>
+                                    </div>
+                        <!-- End of Job Category Options -->
+
+
+<!-- Phone Numebr entry-->
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="jobPhone" type="tel" data-error="Invalid phone number." class="validate">
+                <label for="jobPhone">Phone Number (optional)</label>
+            </div>
+        </div>
+<!-- end phone number entry -->
+
+<!-- Enter Business Email -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input  id="jobEmail" type="email" class="validate">
+                <label for="jobEmail">Business Email (optional)</label>
+            </div>
+        </div>
+<!-- end of business email entry -->
+
+<!-- Business website entry -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="jobURL" type="url" class="validate">
+                <label for="jobURL">Business website (optional)</label>
+            </div>
+        </div>
+<!-- end of business email entry -->
+
+<!-- Contact name entry -->
+        <div class="row">
+            <div class="input-field col s12 smtxt">
+                <input class="input-item" id="jobContact" type="text">
+                <label for="jobContact">Contact Name at Business (optional)</label>
+            </div>
+        </div>
+<!-- end of cotact name entry -->
+
+<!-- Entry of job description if known -->
+        <div class="row">
+            <div class="input-field col s12 smtxt">
+                <input class="input-item" id="jobDescription" type="text">
+                <label for="jobDescription">Job Description & Info (optional)</label>
+            </div>
+        </div>
+<!-- End of text input -->
+
+<!-- Submit Button -->
+        <div class="row">
+            <div class="landing-options col s12">
+                <button class="btn waves-effect red accent-4 smtxt" id="submit-job" type="submit" name="action" >Share with Crwd<i class="material-icons right">cloud_upload</i></button>
+
+                </button>
+                <br>
+                <br>
+            </div>
+        </div>
+    <!-- end of submit button -->
+    <ul class="errorMessages"></ul>
+    </form>
+    <!-- End of Add job form -->
+</div>
+    <!-- End of card content -->
+    
+    
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer grey lighten-3">
+        <div class="container">
+            <!-- <div class="row"> -->
+                <!-- Landing Page icons on the bottom -->
+                <div class="landing-options" align="center">
+
+                    <a href="/search"><img src="./assets/images/icons/search.png"></a>
+
+                    <a href="./v3-addform.html"><img src="./assets/images/icons/add.png"></a>
+                </div>
+            <!-- <div class="col s12 m4 l6">
+                <h5 class="black-text">Second Footer Content</h5>
+                <p class="grey-text">You can use rows and columns here to organize your footer content.</p>
+            </div> -->
+            </div>
+        </div>
+
+    <div class="footer-copyright">
+        <div class="container grey-text" align="center">
+          © 2018 Copyright Tsugi.io & Redpoint Media LLC
+        <!-- <a class="grey-text right" href="#!">More Links</a> -->
+        </div>
+    </div>
+
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Materialize JS CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- Local JS files -->
+		<script src="./assets/js/job.js"></script>
+		<script src="./assets/js/form.js"></script>
+		<script src="./assets/js/index.js"></script>
+
+    <script>
+        $("document").ready(function(){
+            $(".button-collapse").sideNav();
+        });
+    </script>
+
+</body>
+</html>
