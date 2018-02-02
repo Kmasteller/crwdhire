@@ -1,81 +1,136 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-      <title>Crwd Hire</title>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>CRWD HIRE.com</title>
 
-    <!-- jQuery Script -->
-	    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Material Icon CDN -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Materialize CSS CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
     <!-- Your custom styles -->
-        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/v3-style.css">
         <link rel="stylesheet" href="./less/css/style.css">
     <!-- Favicon -->
-	    <link rel="shortcut icon" type="image/png" href="./assets/images/crowdhirelogos/favicon.png"/>
-	    <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="./assets/images/crowdhirelogos/favicon.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/crowdhirelogos/favicon.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/crowdhirelogos/favicon.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/crowdhirelogos/favicon.png"></link>
+        <link rel="manifest" href="assets/img/fav/manifest.json"></link>
+        <link rel="shortcut icon" href="./assets/images/crowdhirelogos/favicon.png"></link>
     <!-- End of head script and link tags -->
 
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        }
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+
   </head>
+
   <body>
-    <!-- This section is for what will look like the phone screen -->
-    <div class="screen-search">
-    <nav class=""><!--black-->
-        <div class="nav-wrapper">
-          <div class=""><!--container-->
 
-                <!-- Navigation -->
-                <nav class="nav-main off">
-                    <ul id="list">
-                        <li><a href="index.html">Home</a></li>
-                        
-                        <li><a href="/search">Search</a></li>
-                        
-                        <li><a href="addform.html">Add</a></li>
-                        <!-- <br>
-                        <li><a href="contact.html">Contact</a></li> -->
-                    </ul>
-                </nav>
-                    <!--Top logo for every page -->
-                <div>
-                        <img class="top-logo" src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="200px" height"">
+    <header>
+
+    <!-- Full Size Menu -->
+        <div class="navbar-fixed">
+            
+        <nav class="grey lighten-3">
+            
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="#" class="brand-logo"><img src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="" height="50px"></a>
+                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons icon-black">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="index.html" class="black-text">Home</a></li>
+                            <li><a href="/search" class="black-text">Search</a></li>
+                            <li><a href="addform.html" class="black-text">Add</a></li>
+                            <li><a href="resources.html" class="black-text">Resources</a></li>
+                        </ul>
+
+    
                 </div>
-                    <!--Main Nav for every page -->
-                <div class="nav-toggle">
-                        <div class="icon"></div>
-                </div>
-          </div>
-        </div>
+            </div>
+            
     </nav>
+    
+    </div>
+    <!-- Mobile Menu -->
+        <ul class="side-nav" id="mobile-menu">
+            <!-- <a><i class="material-icons right close icon-black button-collapse">close</i></a> -->
+            <li>
+                
+                <div class="userView">
+                    <div class="">
+                    <img src="./assets/images/worlddotscrop.png" width="100%" alt="Background Sidenav">
+                    </div>
+                    <!-- <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
+                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+                </div>
+            </li>
+
+            <li><a href="index.html"><i class="material-icons">home</i>Home</a></li>
+            <li><a href="/search"><i class="material-icons">search</i>Search Posts</a></li>
+            <li><a href="addform.html"><i class="material-icons">add</i>Add New Posts</a></li>
+            <li><a href="resources.html"><i class="material-icons">insert_drive_file</i>Employment Resources</a></li>
+        </ul>
+    </header>
+    
         {{{body}}}
-</div>  
 
+    <!-- Footer -->
+    <footer class="page-footer grey lighten-3">
+        <div class="container">
+            <!-- <div class="row"> -->
+                <!-- Landing Page icons on the bottom -->
+                <div class="landing-options" align="center">
 
-  {{!-- <div class="container">
-      
-    <br><br> --}}
-{{!-- Handlebars inserts here --}}
+                    <a href="/search"><img src="./assets/images/icons/search.png"></a>
 
+                    <a href="addform.html"><img src="./assets/images/icons/add.png"></a>
+                </div>
+            <!-- <div class="col s12 m4 l6">
+                <h5 class="black-text">Second Footer Content</h5>
+                <p class="grey-text">You can use rows and columns here to organize your footer content.</p>
+            </div> -->
+            </div>
+        </div>
 
-    {{!-- <br><br>
+    <div class="footer-copyright">
+        <div class="container grey-text" align="center">
+          © 2018 Copyright Tsugi.io & Redpoint Media LLC
+        <!-- <a class="grey-text right" href="#!">More Links</a> -->
+        </div>
+    </div>
 
-    <button type="submit" class="btn btn-success" id="submit-button">Submit</button>
-   
-		<br><br> --}}
+    </footer>
 
-  {{!-- </div> --}}
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
     <!-- Materialize JS CDN -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
     <!-- Local JS files -->
 		<script src="./assets/js/job.js"></script>
 		<script src="./assets/js/form.js"></script>
 		<script src="./assets/js/index.js"></script>
+
+    <script>
+        $("document").ready(function(){
+            $(".button-collapse").sideNav();
+        });
+    </script>
 
 </body>
 </html>
