@@ -45,7 +45,7 @@ fileUpload.addEventListener('change', function (event) {
 // $(document).ready(function () {
 //     $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload();
 //     console.log("did this run?");
-    
+
 // });
 
 // $.cloudinary.config({ cloud_name: 'crwdhire', secure: true });
