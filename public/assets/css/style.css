@@ -49,3 +49,10 @@ i.icon-black {
     max-width: 425px !important;
     min-width: 400px !important;
 }
+.search-options{
+    padding: 0 15px 0 0;
+    line-height: 2px;
+}
+.search-result-title{
+    color:black;
+}
