@@ -184,7 +184,7 @@ app.get("/all/ascending", function (req, res) {
 
   // // DELETE route for deleting posts
   // app.delete("/api/posts/:id", function(req, res) {
-  //   // Add sequelize code to delete a post where the id is equal to req.params.id, 
+  //   // Add sequelize code to delete a post where the id is equal to req.params.id,
   //   // then return the result to the user using res.json
   //   db.Job.destroy({
   //     where: {
@@ -204,7 +204,7 @@ app.get("/all/ascending", function (req, res) {
   //     where: {
   //       id: req.body.id
   //     },
-             
+
   //    })
   //    .then(function(results){
   //     res.json(results);
