@@ -2,7 +2,7 @@
     background-color: #eeeeee;
 }
 main{
-    background-color: #000000;
+    background-color: #000000 !important;
     background-image: url("../images/blackbgwithpattern.png");
     background-repeat: no-repeat;
     display: flex;
@@ -12,7 +12,7 @@ main{
     justify-content: center;
 }
 i.icon-black {
-    color: black;
+    color: black !important;
 }
 .brand-logo{
     margin-top: 5px !important;

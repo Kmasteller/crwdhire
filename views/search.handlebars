@@ -80,7 +80,7 @@
                 <p>⬇︎ Most recent Crwd Posts ⬇︎</p>
             </div>
             <!-- end -->
-        <div class="lower-screen">
+        {{!-- <div class="lower-screen"> --}}
                 <!-- Job post Card -->
                     {{!-- <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -100,12 +100,12 @@
                 <!-- end of card -->
 
                 {{#each jobs}}
-                <div class="card">
+                <div class="card" align="center">
                     <div class="card-image waves-effect waves-block waves-light">
 
                         <img class="activator" src="{{this.jobImage2}}">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" align="center">
                         <h5>{{this.jobType}}
                             <hr>{{this.jobTitle}}</h5>
                         <p>{{this.jobCompany}}</p>
@@ -127,7 +127,7 @@
                 </div>
                 {{/each}}
 
-            </div>
+            {{!-- </div> --}}
     </main>
 
     {{!-- </div> --}}
