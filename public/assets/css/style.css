@@ -22,7 +22,7 @@ i.icon-black {
 }
 .card{
     margin-top: px;
-    max-width: 425px;
+    max-width: 425px !important;
     /* left: 50% !important; */
 }
 .welcome{
