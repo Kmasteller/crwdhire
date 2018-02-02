@@ -1,25 +1,22 @@
 
     <!-- Our content here -->
       <main>
-        <!-- screen content -->
+    <!-- screen content -->
         <!-- Search options Sort and Filter -->
         <div class="card col s12" align="center">
             <div class="search-options" align="center">
-                    <br>
-                   <a href="sortandfilter.html"><img src="./assets/images/icons/filter.png"></a>
+                <br>
+                <a href="sortandfilter.html"><img src="./assets/images/icons/filter.png"></a>
             </div>
-        <!-- end -->
-
-            <!-- Label identifying currently visible sorting choice -->
+        <!-- Label identifying currently visible sorting choice -->
             <div class="search-result-title" align="center">
                 <p>⬇︎ Most recent Crwd Posts ⬇︎</p>
             </div>
         </div>
             <div>
                 {{#each jobs}}
-                <div class="card" align="center">
+                <div class="card col s12" align="center">
                     <div class="card-image waves-effect waves-block waves-light">
-
                         <img class="activator" src="{{this.jobImage2}}" width="80%" height"">
                     </div>
                     <div class="card-content" align="center">
@@ -39,7 +36,6 @@
                         <p><h6>Phone Number:</h6> {{this.jobPhone}}</p>
                         <p><h6>Contact:</h6> {{this.jobContact}}</p>
                         <p><h6>Company URL: </h6>{{this.jobURL}}</p>
-
                     </div>
                 </div>
                 {{/each}}
