@@ -23,172 +23,195 @@
         <link rel="manifest" href="assets/img/fav/manifest.json"></link>
         <link rel="shortcut icon" href="./assets/images/crowdhirelogos/favicon.png"></link>
     <!-- End of head script and link tags -->
-
     <style>
-      body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
+        body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+          }
+        main {
+          flex: 1 0 auto;
         }
-      main {
-        flex: 1 0 auto;
-      }
+        #wrapper {
+          width: 960px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 5%;
+        }
+        #articles {
+          display: inline-block;
+          overflow: auto;
+          width: 80%;
+          height: 150px;
+        }
+        #notes {
+          float: ;
+          width: 80%;
+        }
+        textarea, input {
+          display: inline-block;
+          width: 80%;
+          background-color:lightgray;
+        }
+        input {
+          height: 150px;
+          font-size: 12px;
+        }
+        textarea {
+          height: auto;
+          font-size: 12px;
+          width: 340px;
+        }
     </style>
-    <!-- FullStory Code Snipit -->
-    <script>
-        window['_fs_debug'] = false;
-        window['_fs_host'] = 'fullstory.com';
-        window['_fs_org'] = 'AAEC9';
-        window['_fs_namespace'] = 'FS';
-        (function(m,n,e,t,l,o,g,y){
-            if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-            g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
-            o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
-            y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-            g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
-            y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
-            g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-            g.clearUserCookie=function(){};
-        })(window,document,window['_fs_namespace'],'script','user');
-        </script>
+  <!-- FullStory Code Snipit -->
+  <script>
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'AAEC9';
+      window['_fs_namespace'] = 'FS';
+      (function(m,n,e,t,l,o,g,y){
+          if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+          g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+          o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+          g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+          y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+          g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+          g.clearUserCookie=function(){};
+      })(window,document,window['_fs_namespace'],'script','user');
+      </script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <header>
+<header>
 
-    <!-- Full Size Menu -->
-        <div class="navbar-fixed">
-            
-        <nav class="grey lighten-3">
-            
-            <div class="nav-wrapper">
-                <div class="container">
-                    <a href="#" class="brand-logo"><img src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="" height="50px"></a>
-                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons icon-black">menu</i></a>
-                        <ul class="right hide-on-med-and-down">
-                            <li><a href="index.html" class="black-text">Home</a></li>
-                            <li><a href="/search" class="black-text">Search</a></li>
-                            <li><a href="addform.html" class="black-text">Add</a></li>
-                            <li><a href="resources.html" class="black-text">Job Search Resources</a></li>
-                            <li><a href="employmentupdates.html" class="black-text">Local Employment Updates</a></li>
-                        </ul>
+  <!-- Full Size Menu -->
+      <div class="navbar-fixed">
 
-    
-                </div>
-            </div>
-            
-    </nav>
-    </div>
-    <!-- Mobile Menu -->
-        <ul class="side-nav" id="mobile-menu">
-            <!-- <a><i class="material-icons right close icon-black button-collapse">close</i></a> -->
-            <li>
-                
-                <div class="userView">
-                    <div class="">
-                    <img src="./assets/images/worlddotscrop.png" width="100%" alt="Background Sidenav">
-                    </div>
-                    <!-- <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
-                    <a href="#!name"><span class="white-text name">John Doe</span></a>
-                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
-                </div>
-            </li>
+      <nav class="grey lighten-3">
 
-            <li><a href="index.html"><i class="material-icons">home</i>Home</a></li>
-            <li><a href="/search"><i class="material-icons">search</i>Search Posts</a></li>
-            <li><a href="addform.html"><i class="material-icons">add</i>Add New Posts</a></li>
-            <li><a href="resources.html"><i class="material-icons">insert_drive_file</i>Job Search Resources</a></li>
-            <li><a href="employmentupdates.html"><i class="material-icons">new_releases</i>Local Employment Updates</a></li>
-        </ul>
-    </header>
+          <div class="nav-wrapper">
+              <div class="container">
+                  <a href="#" class="brand-logo"><img src="./assets/images/crowdhirelogos/crwdhirelogo3.png" width="" height="50px"></a>
+                  <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons icon-black">menu</i></a>
+                      <ul class="right hide-on-med-and-down">
+                          <li><a href="index.html" class="black-text">Home</a></li>
+                          <li><a href="/search" class="black-text">Search</a></li>
+                          <li><a href="addform.html" class="black-text">Add</a></li>
+                          <li><a href="resources.html" class="black-text">Job Search Resources</a></li>
+                          <li><a href="employmentupdates.html" class="black-text">Local Employment Updates</a></li>
+                      </ul>
 
-    <main>
-    <!-- Your content here -->
 
-    <!-- Animated Gif and Main Logo Card -->
-        <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="./assets/images/SLC.gif">
-                </div>
-                <div class="card-content-landing" align="center">
-                    <span class="welcome"><h5 align="center">Local Utah Business & Job News</h5></span>
-                    <hr>
-                    <p>Recent articles from utahbusiness.com</p>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <hr>
-                    <p>Click on an article title above to leave comments about it below</p>
-                    <br>
-                    <br>
-                    <!-- <img class="landing-logo" src="./assets/images/crowdhirelogos/crwdhirelogo1.jpg" width="80%" height""> -->
-                </div>
-                <!-- Content only shown on click of the animated gif -->
-                <div class="card-reveal">
-                    <span class=" card-title slide-logo"><i class="material-icons right close">close</i></span>
-                    <p align="left">Connect to the power of the Crwd in your job search.<br>
-                        <br>For years, job searches and postings have been run by the companies looking for help. Crwd Hire turns this old model on its head and puts the power in the hands of the Crwd.
-                        <br>
-                        <br>Person to person networking has always been the best way to find a job. With Crwd Hire the Crwd takes the power back, and makes networking, Crwd powered!</p>
+              </div>
+          </div>
 
-                        <img src="./assets/images/worlddots.png" width="100%">
-                </div>
-            <!-- <br> -->
-        </div>
-    <!-- End of hidden card content -->
-    
-    
-    </main>
+      </nav>
+      </div>
+  <!-- Mobile Menu -->
+      <ul class="side-nav" id="mobile-menu">
+          <!-- <a><i class="material-icons right close icon-black button-collapse">close</i></a> -->
+          <li>
 
-    <!-- Footer -->
-    <footer class="page-footer grey lighten-3">
-        <div class="container">
-            <!-- <div class="row"> -->
-                <!-- Landing Page icons on the bottom -->
-                <div class="landing-options" align="center">
+              <div class="userView">
+                  <div class="">
+                  <img src="./assets/images/worlddotscrop.png" width="100%" alt="Background Sidenav">
+                  </div>
+                  <!-- <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
+                  <a href="#!name"><span class="white-text name">John Doe</span></a>
+                  <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+              </div>
+          </li>
 
-                    <a href="/search"><img src="./assets/images/icons/search.png"></a>
+          <li><a href="index.html"><i class="material-icons">home</i>Home</a></li>
+          <li><a href="/search"><i class="material-icons">search</i>Search Posts</a></li>
+          <li><a href="addform.html"><i class="material-icons">add</i>Add New Posts</a></li>
+          <li><a href="resources.html"><i class="material-icons">insert_drive_file</i>Job Search Resources</a></li>
+          <li><a href="employmentupdates.html"><i class="material-icons">new_releases</i>Local Employment Updates</a></li>
+      </ul>
+  </header>
 
-                    <a href="addform.html"><img src="./assets/images/icons/add.png"></a>
-                </div>
-            <!-- <div class="col s12 m4 l6">
-                <h5 class="black-text">Second Footer Content</h5>
-                <p class="grey-text">You can use rows and columns here to organize your footer content.</p>
-            </div> -->
-            </div>
-        </div>
+  <main>
+      <!-- Your content here -->
 
-    <div class="footer-copyright">
-        <div class="container grey-text" align="center">
-          © 2018 Copyright Tsugi.io & Redpoint Media LLC
-        <!-- <a class="grey-text right" href="#!">More Links</a> -->
-        </div>
-    </div>
+      <!-- Animated Gif and Main Logo Card -->
+          <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="./assets/images/SLC.gif">
+                  </div>
+                  <div class="card-content-landing" align="center">
+                      <span class="welcome"><h5 align="center">Local Utah Business & Job News</h5></span><p>⬇︎ Recent articles from utahbusiness.com ⬇︎</p>
+                      <hr>
+                      <div id="articles"></div>
+                      <br>
+                      <hr>
+                      <p>⬆︎ Click on an article title above to leave comments below ⬇︎</p>
+                      <div id="notes"></div>
+                      <br>
+                      <!-- <img class="landing-logo" src="./assets/images/crowdhirelogos/crwdhirelogo1.jpg" width="80%" height""> -->
+                  </div>
+                  <!-- Content only shown on click of the animated gif -->
+                  <div class="card-reveal">
+                      <span class=" card-title slide-logo"><i class="material-icons right close">close</i></span>
+                      <p align="left">Connect to the power of the Crwd in your job search.<br>
+                          <br>For years, job searches and postings have been run by the companies looking for help. Crwd Hire turns this old model on its head and puts the power in the hands of the Crwd.
+                          <br>
+                          <br>Person to person networking has always been the best way to find a job. With Crwd Hire the Crwd takes the power back, and makes networking, Crwd powered!</p>
 
-    </footer>
+                          <img src="./assets/images/worlddots.png" width="100%">
+                  </div>
+              <!-- <br> -->
+          </div>
+      <!-- End of hidden card content -->
 
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-    <!-- Materialize JS CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      </main>
 
-    <!-- Local JS files -->
-		<script src="./assets/js/job.js"></script>
-		<script src="./assets/js/form.js"></script>
-		<script src="./assets/js/index.js"></script>
+      <!-- Footer -->
+      <footer class="page-footer grey lighten-3">
+          <div class="container">
+              <!-- <div class="row"> -->
+                  <!-- Landing Page icons on the bottom -->
+                  <div class="landing-options" align="center">
 
-    <script>
-        $("document").ready(function(){
-            $(".button-collapse").sideNav();
-        });
-    </script>
+                      <a href="/search"><img src="./assets/images/icons/search.png"></a>
 
-</body>
-</html>
+                      <a href="addform.html"><img src="./assets/images/icons/add.png"></a>
+                  </div>
+              <!-- <div class="col s12 m4 l6">
+                  <h5 class="black-text">Second Footer Content</h5>
+                  <p class="grey-text">You can use rows and columns here to organize your footer content.</p>
+              </div> -->
+              </div>
+          </div>
+
+      <div class="footer-copyright">
+          <div class="container grey-text" align="center">
+            © 2018 Copyright Tsugi.io & Redpoint Media LLC
+          <!-- <a class="grey-text right" href="#!">More Links</a> -->
+          </div>
+      </div>
+
+      </footer>
+
+      <!-- jQuery CDN -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+      <!-- Materialize JS CDN -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+      <!-- Local JS files -->
+      <script src="./assets/js/job.js"></script>
+      <script src="./assets/js/form.js"></script>
+      <script src="./assets/js/index.js"></script>
+      <script src="app.js"></script>
+      <script>
+          $("document").ready(function(){
+              $(".button-collapse").sideNav();
+          });
+      </script>
+
+  </body>
+  </html>
