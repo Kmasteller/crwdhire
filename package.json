@@ -10,6 +10,7 @@
     "blueimp-file-upload": "^9.19.3",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
     "cloudinary": "^1.9.1",
     "cloudinary-jquery-file-upload": "^2.4.0",
     "electron": "^1.7.11",
@@ -21,12 +22,13 @@
     "jquery": "^3.3.0",
     "jquery-file-upload-middleware": "^0.1.8",
     "materialize-css": "^0.100.2",
+    "mongoose": "^5.0.5",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.1",
     "nightmare": "^2.10.0",
     "path": "^0.12.7",
     "request": "^2.83.0",
-    "sequelize": "^4.31.1"
+    "sequelize": "^4.31.0"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
